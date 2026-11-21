@@ -87,14 +87,14 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
     <section
       ref={sectionRef}
       id="how-to-participate"
-      className="relative w-full max-w-full min-h-[100dvh] lg:min-h-screen bg-[#f7f2ff] text-[#0e0e0e] overflow-visible flex flex-col justify-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 -mt-[2px]"
+      className="relative w-full max-w-full min-h-[100dvh] lg:min-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
       {/* Pink tint on the LEFT */}
       <div className="absolute top-10 -left-20 w-80 h-80 sm:w-[460px] sm:h-[460px] rounded-full bg-[#ff46a2]/25 blur-3xl pointer-events-none select-none" />
       
-      {/* Soft bottom glow - Bleeds down into Who We Are section */}
-      <div className="absolute -bottom-28 left-1/4 sm:left-1/3 w-[450px] sm:w-[550px] h-72 sm:h-80 rounded-full bg-[#7e3bed]/20 blur-3xl pointer-events-none select-none" />
+      {/* Soft bottom glow - Bleeds down smoothly into Who We Are section */}
+      <div className="absolute -bottom-32 sm:-bottom-40 left-1/4 sm:left-1/3 w-[500px] sm:w-[620px] h-80 sm:h-96 rounded-full bg-[#7e3bed]/20 blur-3xl pointer-events-none select-none z-10" />
 
       {/* Decorative Star Accents - Aligned consistently with previous sections */}
       {/* Star 1: Top-Left */}
