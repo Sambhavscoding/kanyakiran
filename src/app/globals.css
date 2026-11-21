@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --font-andika: 'Andika', sans-serif;
+  --font-caveat: 'Caveat', cursive;
   --foreground-rgb: 15, 23, 42;
   --background-rgb: 255, 255, 255;
 }
@@ -11,7 +15,36 @@ html,
 body {
   width: 100%;
   max-width: 100%;
+  font-family: var(--font-andika), sans-serif;
   overflow-x: hidden;
   overflow-x: clip;
   scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide normal scrollbar globally across Chrome, Safari, Edge, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide scrollbar utility for Chrome, Safari, Edge, Firefox */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Handwriting font class ensuring Caveat loads reliably */
+.font-handwriting {
+  font-family: var(--font-caveat), 'Caveat', 'Dancing Script', 'Brush Script MT', cursive !important;
 }

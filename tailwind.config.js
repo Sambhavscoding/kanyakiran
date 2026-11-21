@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-andika)', 'sans-serif'],
+        sans: ['var(--font-andika)', 'Andika', 'sans-serif'],
+        handwriting: ['var(--font-caveat)', 'Caveat', 'Dancing Script', 'cursive'],
       },
       colors: {
         primary: colors.primary,
