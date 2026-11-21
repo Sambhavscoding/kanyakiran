@@ -12,14 +12,13 @@ const PHONE_FALLBACK = 'https://ik.imagekit.io/9plqngdvcd/phone_fallback';
 export default function HeroSection({ onOpenRegisterModal }) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const { open: openJoinModal } = useJoinModal();
+
   const scrollToRegister = () => {
     if (onOpenRegisterModal) {
       onOpenRegisterModal();
     } else {
-      const element = document.getElementById('join-movement') || document.getElementById('register');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      openJoinModal();
     }
   };
 
