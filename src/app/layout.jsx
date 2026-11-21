@@ -1,5 +1,6 @@
 import './globals.css';
 import { Andika } from 'next/font/google';
+import { JoinModalProvider } from '@/components/forms/JoinModalProvider';
 
 const andika = Andika({
   weight: ['400', '700'],
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth overflow-x-hidden ${andika.variable}`}>
       <body className="bg-[#0e0e0e] text-white font-sans antialiased selection:bg-[#ff46a2] selection:text-white overflow-x-hidden max-w-full">
-        {children}
+        <JoinModalProvider>{children}</JoinModalProvider>
       </body>
     </html>
   );

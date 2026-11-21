@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { HERO_CONTENT } from '@/constants/content';
 import { ArrowRight } from 'lucide-react';
 import BrandStar from '@/components/common/BrandStar';
+import { useJoinModal } from '@/components/forms/JoinModalProvider';
 
 const LAPTOP_FALLBACK = 'https://ik.imagekit.io/9plqngdvcd/laptop_fallback';
 const PHONE_FALLBACK = 'https://ik.imagekit.io/9plqngdvcd/phone_fallback';
