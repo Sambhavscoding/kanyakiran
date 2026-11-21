@@ -35,8 +35,8 @@ export default function HeroSection({ onOpenRegisterModal }) {
             loop
             playsInline
             onPlaying={() => setIsVideoPlaying(true)}
-            className={`w-full h-full object-cover scale-[1.32] sm:scale-[1.28] filter grayscale contrast-125 brightness-75 transition-opacity duration-1000 ${
-              isVideoPlaying ? 'opacity-40' : 'opacity-0'
+            className={`w-full h-full object-cover scale-[1.32] sm:scale-[1.28] filter grayscale contrast-115 brightness-90 transition-opacity duration-1000 ${
+              isVideoPlaying ? 'opacity-75 sm:opacity-80' : 'opacity-0'
             }`}
           >
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
@@ -53,13 +53,13 @@ export default function HeroSection({ onOpenRegisterModal }) {
           <img
             src={LAPTOP_FALLBACK}
             alt="Kanya Kiran Background"
-            className="w-full h-full object-cover filter grayscale contrast-125 brightness-75 opacity-40"
+            className="w-full h-full object-cover filter grayscale contrast-115 brightness-90 opacity-75 sm:opacity-80"
           />
         </picture>
 
-        {/* Layer 3: Contrast Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/95 via-[#0e0e0e]/80 to-[#0e0e0e]/40 pointer-events-none z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-[#0e0e0e]/70 pointer-events-none z-10" />
+        {/* Layer 3: Contrast Gradients - Brought down black filter opacity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/60 via-[#0e0e0e]/35 to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e]/80 via-transparent to-[#0e0e0e]/30 pointer-events-none z-10" />
       </div>
 
       {/* Decorative Brand Petal Glows & Star Motifs */}
@@ -119,14 +119,14 @@ export default function HeroSection({ onOpenRegisterModal }) {
 
         {/* Hero Headline & Tagline */}
         <div className="max-w-3xl space-y-3 sm:space-y-6">
-          <h1 className="text-[2.35rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight sm:leading-[1.15]">
+          <h1 className="text-[2.35rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight sm:leading-[1.15] drop-shadow-md">
             <span className="block text-white">For every woman,</span>
             <span className="block bg-gradient-to-r from-white via-[#ebddff] to-[#ff46a2] bg-clip-text text-transparent">
               but not just for women.
             </span>
           </h1>
 
-          <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-[#ccc3d8] leading-relaxed max-w-2xl font-normal">
+          <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-[#ccc3d8] leading-relaxed max-w-2xl font-normal drop-shadow-sm">
             {HERO_CONTENT.announcementSubtitle}
           </p>
 
