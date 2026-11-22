@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,7 @@
 :root {
   --font-andika: 'Andika', sans-serif;
   --font-caveat: 'Caveat', cursive;
+  --font-bodoni: 'Bodoni Moda', serif;
   --foreground-rgb: 15, 23, 42;
   --background-rgb: 255, 255, 255;
 }
@@ -16,9 +17,7 @@ body {
   width: 100%;
   max-width: 100%;
   font-family: var(--font-andika), sans-serif;
-  overflow-x: hidden;
   overflow-x: clip;
-  scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -47,4 +46,9 @@ body::-webkit-scrollbar,
 /* Handwriting font class ensuring Caveat loads reliably */
 .font-handwriting {
   font-family: var(--font-caveat), 'Caveat', 'Dancing Script', 'Brush Script MT', cursive !important;
+}
+
+/* Bodoni Moda font class for editorial serif headlines */
+.font-bodoni {
+  font-family: var(--font-bodoni), 'Bodoni Moda', serif !important;
 }

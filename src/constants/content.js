@@ -9,7 +9,7 @@ export const SITE_INFO = {
   keyDateDescription: "National Girl Child Day and International Day of Education",
   socialLinks: {
     twitter: "https://x.com/Kanya_Kiran",
-    instagram: "https://instagram.com", // TO BE CONFIRMED by Kanya Kiran team
+    instagram: "https://www.instagram.com/kanyakiranofficial/",
     youtube: "",                        // TO BE CONFIRMED
     linkedin: "",                       // TO BE CONFIRMED
   },

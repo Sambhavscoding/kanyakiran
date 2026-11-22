@@ -39,17 +39,14 @@ export default function WhoWeAreSection({
     <section
       ref={sectionRef}
       id="who-we-are"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen bg-[#f7f2ff] text-[#0e0e0e] overflow-hidden flex flex-col justify-center py-5 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8 -mt-[2px]"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-5 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
-      {/* Bleeding Lilac Glow from bottom of How To Participate section */}
-      <div className="absolute -top-24 left-1/4 sm:left-1/3 w-[450px] sm:w-[550px] h-72 sm:h-80 rounded-full bg-[#7e3bed]/20 blur-3xl pointer-events-none select-none" />
-
       {/* Soft Pink Glow - Right Side */}
       <div className="absolute top-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#ff46a2]/20 blur-3xl pointer-events-none select-none" />
 
-      {/* Soft Violet Glow - Bottom Center */}
-      <div className="absolute -bottom-16 left-1/3 w-80 h-80 rounded-full bg-[#7e3bed]/10 blur-3xl pointer-events-none select-none" />
+      {/* Soft Lilac Glow - Positioned in center so it fades smoothly without creating any bottom seam */}
+      <div className="absolute top-1/2 -left-20 -translate-y-1/2 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/12 blur-3xl pointer-events-none select-none" />
 
       {/* Decorative Star Accents */}
       {/* Star 1: Top-Left */}

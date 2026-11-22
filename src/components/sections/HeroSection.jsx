@@ -23,7 +23,7 @@ export default function HeroSection({ onOpenRegisterModal }) {
   };
 
   return (
-    <section className="relative z-20 w-full max-w-full h-[100dvh] lg:h-screen bg-[#0e0e0e] text-white flex items-end sm:items-center overflow-hidden pt-16 pb-12 sm:pt-28 sm:pb-28 lg:pt-36 lg:pb-32 shadow-[0_24px_50px_rgba(0,0,0,0.85)]">
+    <section id="hero" className="relative z-20 w-full max-w-full h-[100dvh] lg:h-screen bg-[#0e0e0e] text-white flex items-end sm:items-center overflow-hidden pt-16 pb-12 sm:pt-28 sm:pb-28 lg:pt-36 lg:pb-32 shadow-[0_24px_50px_rgba(0,0,0,0.85)]">
       {/* Background Container */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         
@@ -135,6 +135,7 @@ export default function HeroSection({ onOpenRegisterModal }) {
             <div className="absolute inset-0 bg-[#ff46a2] rounded-2xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none" />
 
             <button
+              id="hero-join-btn"
               onClick={scrollToRegister}
               className="relative inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl bg-[#ff46a2] hover:bg-[#ff2f96] text-[#0e0e0e] font-bold text-xs sm:text-sm tracking-wider uppercase shadow-sm group-hover:shadow-[0_0_16px_rgba(255,70,162,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
             >

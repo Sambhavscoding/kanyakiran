@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-andika)', 'Andika', 'sans-serif'],
         handwriting: ['var(--font-caveat)', 'Caveat', 'Dancing Script', 'cursive'],
+        bodoni: ["'Bodoni Moda'", 'serif'],
       },
       colors: {
         primary: colors.primary,
