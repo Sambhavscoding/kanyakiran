@@ -31,15 +31,37 @@ export function JoinModalProvider({ children }) {
       <dialog
         ref={dialogRef}
         aria-labelledby="join-title"
-        // click on the dark backdrop (the dialog element itself) closes it
+        // a click on the blurred backdrop (the dialog element itself) closes it
         onClick={(e) => e.target === dialogRef.current && close()}
-        className="m-auto w-[min(92vw,34rem)] max-h-[90vh] overflow-y-auto rounded-lg bg-white p-6 text-neutral-900 backdrop:bg-black/70"
+        style={{ colorScheme: "dark" }}
+        className="m-auto w-[min(94vw,36rem)] overflow-hidden rounded-3xl border border-fuchsia-400/25 bg-[#140b22]/80 p-0 text-white shadow-[0_0_80px_rgba(168,85,247,0.35)] backdrop-blur-2xl backdrop:bg-[#0a0412]/60 backdrop:backdrop-blur-md"
       >
-        <div className="mb-4 flex items-center justify-between">
-          <h2 id="join-title" className="text-2xl font-semibold">Join the Movement</h2>
-          <button type="button" onClick={close} aria-label="Close" className="text-2xl leading-none">×</button>
+        {/* thin gradient line on top of the card */}
+        <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500" />
+        {/* soft glow behind the content */}
+        <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-fuchsia-600/25 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-violet-600/25 blur-3xl" />
+
+        <div className="relative max-h-[88vh] overflow-y-auto px-6 pb-8 pt-6 sm:px-9">
+          <div className="mb-6 flex items-start justify-between gap-4">
+            <div>
+              <h2 id="join-title" className="text-3xl font-bold tracking-tight">
+                Join the <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">Movement</span>
+              </h2>
+              <p className="mt-1 text-sm text-fuchsia-200/70">#AbAurNahi &nbsp; #GirlsWhoInspire</p>
+            </div>
+            <button
+              type="button"
+              onClick={close}
+              aria-label="Close"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl leading-none text-white/80 transition hover:border-fuchsia-400/60 hover:bg-fuchsia-500/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400"
+            >
+              ×
+            </button>
+          </div>
+
+          <JoinForm key={formKey} onDone={close} />
         </div>
-        <JoinForm key={formKey} onDone={close} />
       </dialog>
     </JoinModalContext.Provider>
   );
