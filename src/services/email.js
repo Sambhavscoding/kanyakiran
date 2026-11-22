@@ -5,11 +5,15 @@ import path from "node:path";
 // ---- Team: edit the values in this block only ----
 const BRAND = {
   pink: "#ff46a2",
+  accent: "#7c3aed", // purple used for the coloured words and links
   dark: "#0e0e0e",
   text: "#222222",
   muted: "#666666",
-  bgBase: "#f6effc", // soft lavender, same family as the site background
-  bgGlow: "#fbd0e8", // soft fuchsia glow
+  bgGlow: "#fbc4e2", // soft fuchsia (top-left of the background)
+  bgBase: "#eadcfb", // soft lavender (middle)
+  bgDeep: "#cdb8f6", // soft purple (bottom-right)
+  violet: "#7c3aed", // used in the colour bar under the header
+  fuchsia: "#d946ef",
 };
 const REPLY_TO = ""; // a mailbox that a person reads, for example "hello@kanyakiran.com". Empty = no reply-to
 const SOCIAL_LINKS = [
@@ -55,7 +59,7 @@ export function buildConfirmationEmail(fullName, logos = []) {
   const font = "Arial, Helvetica, sans-serif";
 
   const links = SOCIAL_LINKS.filter((l) => l.url)
-    .map((l) => `<a href="${escapeHtml(l.url)}" style="color:${BRAND.pink};text-decoration:none;">${escapeHtml(l.label)}</a>`)
+    .map((l) => `<a href="${escapeHtml(l.url)}" style="color:${BRAND.accent};text-decoration:none;">${escapeHtml(l.label)}</a>`)
     .join(" &nbsp;|&nbsp; ");
 
   // Header: the name on the left, the small logos on the right.
@@ -68,7 +72,7 @@ export function buildConfirmationEmail(fullName, logos = []) {
   const logoRow =
     `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>` +
     `<td align="left" valign="middle" style="font-family:${font};font-size:22px;font-weight:bold;letter-spacing:1px;color:${BRAND.dark};white-space:nowrap;">` +
-    `KANYA <span style="color:${BRAND.pink};">KIRAN</span></td>` +
+    `KANYA <span style="color:${BRAND.accent};">KIRAN</span></td>` +
     (logos.length
       ? `<td align="right" valign="middle"><table role="presentation" cellpadding="0" cellspacing="0" align="right"><tr>${logoCells}</tr></table></td>`
       : "") +
@@ -77,22 +81,22 @@ export function buildConfirmationEmail(fullName, logos = []) {
   // Email clients need table layout and inline styles. Do not replace them with CSS classes.
   const html = `<!DOCTYPE html>
 <html lang="en">
-<body style="margin:0;padding:0;background-color:${BRAND.bgBase};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="${BRAND.bgBase}" style="background-color:${BRAND.bgBase};background-image:linear-gradient(135deg, ${BRAND.bgGlow} 0%, ${BRAND.bgBase} 55%);padding:24px 12px;">
+<body style="margin:0;padding:0;background-color:${BRAND.bgDeep};">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="${BRAND.bgBase}" style="background-color:${BRAND.bgBase};background-image:linear-gradient(135deg, ${BRAND.bgGlow} 0%, ${BRAND.bgBase} 50%, ${BRAND.bgDeep} 100%);padding:24px 12px;">
     <tr><td align="center">
-      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(255,70,162,0.15);">
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 10px 40px rgba(124,58,237,0.22);">
         <tr>
           <td style="background:#ffffff;padding:22px 32px;font-family:${font};">
             ${logoRow}
           </td>
         </tr>
-        <tr><td style="height:4px;background:${BRAND.pink};font-size:0;line-height:0;">&nbsp;</td></tr>
+        <tr><td style="height:4px;background-color:${BRAND.pink};background-image:linear-gradient(90deg, ${BRAND.violet} 0%, ${BRAND.fuchsia} 50%, ${BRAND.pink} 100%);font-size:0;line-height:0;">&nbsp;</td></tr>
         <tr>
           <td style="padding:32px;font-family:${font};color:${BRAND.text};font-size:16px;line-height:1.6;">
             <p style="margin:0 0 16px;font-size:20px;font-weight:bold;">Dear ${name},</p>
             <p style="margin:0 0 16px;">${escapeHtml(COPY.intro)}</p>
             <p style="margin:0 0 24px;">${escapeHtml(COPY.next)}</p>
-            <p style="margin:0 0 24px;font-size:18px;font-weight:bold;color:${BRAND.pink};">${escapeHtml(COPY.hashtags)}</p>
+            <p style="margin:0 0 24px;font-size:18px;font-weight:bold;color:${BRAND.accent};">${escapeHtml(COPY.hashtags)}</p>
             <p style="margin:0;">${escapeHtml(COPY.signoff)}</p>
           </td>
         </tr>
