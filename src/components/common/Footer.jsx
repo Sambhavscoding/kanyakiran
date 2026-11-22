@@ -239,7 +239,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full h-auto min-h-[100dvh] md:h-[100dvh] md:max-h-[100dvh] md:min-h-[100dvh] bg-[#f7f2ff] text-[#0e0e0e] overflow-x-hidden md:overflow-hidden flex flex-col justify-between select-none"
+      className="relative w-full h-auto min-h-[100dvh] md:h-[100dvh] md:max-h-[100dvh] md:min-h-[100dvh] bg-transparent text-[#0e0e0e] overflow-x-hidden md:overflow-hidden flex flex-col justify-between select-none"
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/10 blur-3xl pointer-events-none" />

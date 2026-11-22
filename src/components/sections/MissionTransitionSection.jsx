@@ -99,7 +99,7 @@ export default function MissionTransitionSection() {
       ref={sectionRef}
       className="relative w-full overflow-hidden transition-colors duration-75"
       style={{
-        backgroundColor: isFullyDissolved ? '#000000' : '#f7f2ff',
+        backgroundColor: isFullyDissolved ? '#000000' : 'transparent',
       }}
     >
       {/* Layer 1: Our Mission - Renders at full height, hidden once dissolved to prevent any flash glitch */}

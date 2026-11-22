@@ -86,7 +86,7 @@ export default function FourPillarsSection() {
     <section
       ref={sectionRef}
       id="four-pillars"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen bg-[#f7f2ff] text-[#111827] overflow-visible flex flex-col justify-center py-6 lg:py-0 -mt-[2px]"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen bg-transparent text-[#111827] overflow-visible flex flex-col justify-center py-6 lg:py-0 -mt-[2px]"
     >
       {/* Decorative Star Accents */}
       {/* Star 1: Top-Left */}
