@@ -73,13 +73,10 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
   };
 
   const handleRegisterClick = () => {
-    if (onOpenRegisterModal) {
-      onOpenRegisterModal();
-    } else {
-      const regElem = document.getElementById('register') || document.getElementById('join-movement');
-      if (regElem) {
-        regElem.scrollIntoView({ behavior: 'smooth' });
-      }
+    const heroBtn = document.getElementById('hero-join-btn') || document.getElementById('hero');
+    if (heroBtn) {
+      heroBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      heroBtn.focus?.();
     }
   };
 
@@ -335,7 +332,9 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
               <div className="flex items-center gap-1.5 flex-wrap">
                 <span className="text-[#a3a3a3]">Direct Entry:</span>
                 <a
-                  href="mailto:kanya.kiran@kiit.ac.in"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=kanya.kiran@kiit.ac.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#ff46a2] font-bold underline hover:text-pink-300 transition-colors"
                 >
                   kanya.kiran@kiit.ac.in

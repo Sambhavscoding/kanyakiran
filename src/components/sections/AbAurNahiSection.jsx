@@ -36,6 +36,7 @@ export default function AbAurNahiSection() {
   return (
     <section
       ref={sectionRef}
+      id="ab-aur-nahi"
       className="relative w-full max-w-full min-h-[100dvh] lg:h-screen bg-[#f7f2ff] text-[#111827] overflow-visible flex items-center py-6 sm:py-8 lg:py-0"
     >
       {/* Decorative Faded Quarter-Circle on Bottom Right - Overlapping into Four Pillars */}

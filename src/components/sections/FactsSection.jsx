@@ -73,12 +73,24 @@ export default function FactsSection() {
       });
     }, tickerPinRef);
 
+    const ro = new ResizeObserver(() => {
+      ScrollTrigger.refresh();
+    });
+    if (tickerPinRef.current) {
+      ro.observe(tickerPinRef.current);
+    }
+
     const refreshTimer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 250);
 
+    const handleLoad = () => ScrollTrigger.refresh();
+    window.addEventListener('load', handleLoad);
+
     return () => {
       clearTimeout(refreshTimer);
+      window.removeEventListener('load', handleLoad);
+      ro.disconnect();
       ctx.revert();
     };
   }, []);
@@ -93,7 +105,7 @@ export default function FactsSection() {
     <section
       ref={containerRef}
       id="facts"
-      className="relative w-full bg-[#000000] text-white selection:bg-[#ff46a2] selection:text-white"
+      className="relative z-20 w-full bg-[#000000] text-white selection:bg-[#ff46a2] selection:text-white shadow-[0_24px_50px_rgba(0,0,0,0.85)]"
     >
       {/* ============================================================== */}
       {/* 1. TOP MASTHEAD (Signature blur reveal from darkness)          */}
@@ -138,19 +150,16 @@ export default function FactsSection() {
               </span>
             </div>
 
-            {/* Editorial Topic Links */}
+            {/* Editorial Topic Links (The Three Crisis Pillars) */}
             <div className="flex items-center gap-4 sm:gap-8 shrink-0">
               <span className="text-[10px] sm:text-[11px] font-semibold text-white tracking-[1.1px] uppercase border-b-2 border-[#7e3bed] pb-0.5 cursor-default whitespace-nowrap">
                 SEXUAL VIOLENCE
               </span>
               <span className="text-[10px] sm:text-[11px] font-semibold text-[#9ca3af] hover:text-white transition-colors tracking-[1.1px] uppercase cursor-pointer whitespace-nowrap">
-                PHYSICAL VIOLENCE
+                EDUCATIONAL EMPOWERMENT
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-[#9ca3af] hover:text-white transition-colors tracking-[1.1px] uppercase cursor-pointer whitespace-nowrap hidden sm:inline">
-                CHILD MARRIAGE
-              </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-[#9ca3af] hover:text-white transition-colors tracking-[1.1px] uppercase cursor-pointer whitespace-nowrap hidden md:inline">
-                CYBER CRIMES
+              <span className="text-[10px] sm:text-[11px] font-semibold text-[#9ca3af] hover:text-white transition-colors tracking-[1.1px] uppercase cursor-pointer whitespace-nowrap">
+                CYBER VIOLENCE
               </span>
             </div>
 
@@ -163,7 +172,7 @@ export default function FactsSection() {
       </div>
 
       {/* ============================================================== */}
-      {/* 2. SECTION 7.1 HEADLINE TICKER (ROCK-SOLID GSAP PIN AT TOP)   */}
+      {/* 2. SECTION 7.1 HEADLINE TICKER (LOCKED SCREEN + SCROLL UNDERLINE)*/}
       {/* ============================================================== */}
       <div
         ref={tickerPinRef}
@@ -192,16 +201,15 @@ export default function FactsSection() {
 
           {/* THE DOMINANT HEADLINE WITH PINK UNDERLINE SCRUB */}
           <h2 className="font-bodoni font-black uppercase text-3xl sm:text-6xl md:text-7xl lg:text-[84px] tracking-tight leading-[1.2] sm:leading-[1.1] flex flex-col items-center select-none w-full px-2">
-            
             {/* Line 1: ONE RAPE EVERY */}
             <div className="relative inline-block pb-2 sm:pb-3.5">
               <span className="text-[#ff46a2]">ONE </span>
-              <span className="text-white">RAPE </span>
+              <span className="text-white">R*PE </span>
               <span className="text-white">EVERY</span>
               
               {/* Pink Underline revealed with scroll */}
               <span
-                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)] origin-left"
+                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)]"
                 style={{
                   width: '100%',
                   transform: `scaleX(${line1Progress})`,
@@ -217,7 +225,7 @@ export default function FactsSection() {
 
               {/* Pink Underline revealed with scroll */}
               <span
-                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)] origin-left"
+                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)]"
                 style={{
                   width: '100%',
                   transform: `scaleX(${line2Progress})`,
@@ -256,7 +264,7 @@ export default function FactsSection() {
       </div>
 
       {/* ============================================================== */}
-      {/* 3. STANDFIRST STORY & EVIDENCE DOSSIER (4 PILLARS)             */}
+      {/* 3. STANDFIRST STORY & EVIDENCE DOSSIER (3 PILLARS)             */}
       {/* ============================================================== */}
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 pt-4 pb-16 flex flex-col gap-8 sm:gap-12">
         {/* Standfirst / Body Paragraph */}
@@ -277,211 +285,148 @@ export default function FactsSection() {
             By the time you finish scrolling this page, another woman or girl will have been raped.
             These are reported cases only, and the real number is higher.
           </p>
-
-          {/* Source Citation with Purple Indicator */}
-          <div className="flex flex-col items-center justify-center mt-5 sm:mt-7">
-            <div className="w-4 h-1.5 bg-[#7e3bed] mb-1.5 sm:mb-2" />
-            <p className="text-[10px] sm:text-xs font-medium text-[#9ca3af] tracking-[1px] sm:tracking-[1.2px] uppercase px-2 text-center">
-              SOURCE:{' '}
-              <span className="font-semibold text-[#d1d5db]">
-                NATIONAL CRIME RECORDS BUREAU (NCRB), CRIME IN INDIA 2023.
-              </span>
-            </p>
-          </div>
         </div>
 
-        {/* Section 7.2 Header Banner */}
-        <div
-          style={{
-            transitionDuration: '2000ms',
-            transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
-            transitionDelay: '550ms',
-          }}
-          className={`flex flex-col gap-6 sm:gap-8 w-full transition-all ${
-            isInView
-              ? 'opacity-100 blur-none translate-y-0'
-              : 'opacity-0 blur-[12px] translate-y-6'
-          }`}
-        >
-          <div className="border-b border-[#222] pb-3 sm:pb-4 flex items-center justify-between">
-            <div className="flex items-center gap-2 sm:gap-3">
-              <span className="font-serif text-xl sm:text-2xl text-[#7e3bed] font-bold">”</span>
-              <h3 className="font-bodoni font-bold text-base sm:text-2xl text-white tracking-[1.5px] sm:tracking-[2.4px] uppercase">
-                EVIDENCE DOSSIER // THE FOUR CRISIS PILLARS
-              </h3>
-              <span className="font-serif text-xl sm:text-2xl text-[#7e3bed] font-bold">“</span>
+        {/* 3 Pillars Grid Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#222] pb-3 sm:pb-4">
+          <div className="flex items-center gap-2">
+            <span className="text-xs sm:text-sm font-bold text-white tracking-[1.4px] sm:tracking-[2px] uppercase">
+              EVIDENCE DOSSIER // THE THREE CRISIS PILLARS
+            </span>
+          </div>
+          <span className="text-[10px] sm:text-xs font-mono text-[#9ca3af]">
+            03 DOMAINS
+          </span>
+        </div>
+
+        {/* 3 Columns Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#222] border-b border-[#222] pb-8 sm:pb-12">
+          {/* PILLAR 01: Sexual Violence */}
+          <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
+            <div>
+              <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
+                  PILLAR 01
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
+                  SEXUAL VIOLENCE
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
+                  29,670
+                </span>
+                <div className="w-8 h-[2px] bg-[#7e3bed]" />
+              </div>
+
+              {/* Mobile concise copy */}
+              <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
+                rape cases registered in India in 2023. In over 96% of cases, the offender was known to the victim.
+              </p>
+
+              {/* Desktop full copy */}
+              <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
+                rape cases registered in India in 2023. In over 96% of cases, the offender
+                was known to the victim — family members, friends, or neighbours.
+              </p>
             </div>
-          </div>
 
-          {/* 4-Column Newspaper Grid with Vertical Separators */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 lg:divide-x divide-[#222] border-b border-[#222] pb-8 sm:pb-12">
+            <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
+              <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
+                SOURCE:{' '}
+                <span className="font-semibold text-[#d1d5db]">
+                  NCRB, CRIME IN INDIA 2023
+                </span>
+              </p>
+            </div>
+          </article>
 
-            {/* PILLAR 01: Physical Violence */}
-            <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
-              <div>
-                <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
-                    PILLAR 01
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
-                    PHYSICAL VIOLENCE
-                  </span>
-                </div>
-
-                <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                  <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
-                    1.33 lakh+
-                  </span>
-                  <div className="w-8 h-[2px] bg-[#7e3bed]" />
-                </div>
-
-                {/* Mobile concise copy */}
-                <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
-                  cases of cruelty by husband or relatives registered in one year (29.8% of all crimes against women) — that is one crime against a woman every 70 seconds.
-                </p>
-
-                {/* Desktop full copy */}
-                <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
-                  cases of cruelty by a husband or his relatives were registered in one year.
-                  This category made up 29.8% of the 4,48,211 crimes against women in 2023,
-                  the single largest category. Overall, that is one crime against a woman every 70 seconds.
-                </p>
+          {/* PILLAR 02: Educational Empowerment / Child Marriage */}
+          <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
+            <div>
+              <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
+                  PILLAR 02
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
+                  EDUCATIONAL EMPOWERMENT
+                </span>
               </div>
 
-              <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
-                <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
-                  SOURCE:{' '}
-                  <span className="font-semibold text-[#d1d5db]">
-                    NCRB, CRIME IN INDIA 2023
-                  </span>
-                </p>
-              </div>
-            </article>
-
-            {/* PILLAR 02: Educational Empowerment / Fostering */}
-            <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
-              <div>
-                <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
-                    PILLAR 02
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
-                    EDUCATIONAL EMPOWERMENT
-                  </span>
-                </div>
-
-                <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                  <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
-                    15 lakh
-                  </span>
-                  <div className="w-8 h-[2px] bg-[#7e3bed]" />
-                </div>
-
-                {/* Mobile concise copy */}
-                <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
-                  girls under 18 married annually in India, ending school for most. Fewer than 2 in 10 remain in school. India is home to 223 million child brides.
-                </p>
-
-                {/* Desktop full copy */}
-                <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
-                  girls under 18 are married in India every year, ending school for most of them.
-                  At least 1.5 million girls under 18 get married in India each year, and fewer
-                  than 2 in 10 married girls remain in school. India is home to 223 million child brides.
-                </p>
+              <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
+                  15 lakh
+                </span>
+                <div className="w-8 h-[2px] bg-[#7e3bed]" />
               </div>
 
-              <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
-                <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
-                  SOURCE:{' '}
-                  <span className="font-semibold text-[#d1d5db]">
-                    UNICEF INDIA
-                  </span>
-                </p>
-              </div>
-            </article>
+              {/* Mobile concise copy */}
+              <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
+                girls under 18 married annually in India, ending school for most. Fewer than 2 in 10 remain in school. India is home to 223 million child brides.
+              </p>
 
-            {/* PILLAR 03: Cyber Violence */}
-            <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
-              <div>
-                <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
-                    PILLAR 03
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
-                    CYBER VIOLENCE
-                  </span>
-                </div>
+              {/* Desktop full copy */}
+              <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
+                girls under 18 are married in India every year, ending school for most of them.
+                At least 1.5 million girls under 18 get married in India each year, and fewer
+                than 2 in 10 married girls remain in school. India is home to 223 million child brides.
+              </p>
+            </div>
 
-                <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                  <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
-                    19,510
-                  </span>
-                  <div className="w-8 h-[2px] bg-[#7e3bed]" />
-                </div>
+            <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
+              <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
+                SOURCE:{' '}
+                <span className="font-semibold text-[#d1d5db]">
+                  UNICEF INDIA
+                </span>
+              </p>
+            </div>
+          </article>
 
-                {/* Mobile concise copy */}
-                <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
-                  cybercrime cases registered against women in 2023, including stalking, morphing, extortion, blackmail, and circulation of explicit content.
-                </p>
-
-                {/* Desktop full copy */}
-                <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
-                  cybercrime cases against women were registered in 2023, including stalking,
-                  morphing, blackmail, fake profiles and circulation of explicit content.
-                </p>
+          {/* PILLAR 03: Cyber Violence */}
+          <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
+            <div>
+              <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
+                  PILLAR 03
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
+                  CYBER VIOLENCE
+                </span>
               </div>
 
-              <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
-                <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
-                  SOURCE:{' '}
-                  <span className="font-semibold text-[#d1d5db]">
-                    NCRB 2023 (CYBER CRIMES)
-                  </span>
-                </p>
-              </div>
-            </article>
-
-            {/* PILLAR 04: Psychological & Emotional Violence (Editable Block) */}
-            <article className="flex flex-col justify-between p-3.5 sm:p-6 lg:px-7 lg:py-2">
-              <div>
-                <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed] tracking-[1.1px] uppercase">
-                    PILLAR 04
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-[#7e3bed]">/</span>
-                  <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[1.1px] uppercase">
-                    PSYCHOLOGICAL &amp; EMOTIONAL
-                  </span>
-                </div>
-
-                <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                  <span className="font-bodoni font-bold text-xl sm:text-3xl lg:text-[32px] text-[#9ca3af] tracking-[-0.8px] uppercase leading-tight">
-                    TO BE CONFIRMED
-                  </span>
-                  <div className="w-8 h-[2px] bg-[#7e3bed]/40" />
-                </div>
-
-                <div className="bg-[#0a0a0a] border border-[#222] rounded p-2.5 sm:p-3.5">
-                  <p className="text-[#9ca3af] font-light text-[11px] sm:text-sm leading-relaxed">
-                    TO BE CONFIRMED. Copy and figure will be supplied by the Kanya Kiran team before launch.
-                  </p>
-                </div>
+              <div className="flex flex-col gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span className="font-bodoni font-bold text-2xl sm:text-4xl lg:text-[44px] text-white tracking-[-1px] leading-tight">
+                  19,510
+                </span>
+                <div className="w-8 h-[2px] bg-[#7e3bed]" />
               </div>
 
-              <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
-                <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
-                  SOURCE:{' '}
-                  <span className="font-semibold text-[#9ca3af]">
-                    TO BE CONFIRMED
-                  </span>
-                </p>
-              </div>
-            </article>
+              {/* Mobile concise copy */}
+              <p className="block lg:hidden text-[#d1d5db] font-light text-xs sm:text-sm leading-relaxed">
+                cybercrime cases registered against women in 2023, including stalking, morphing, extortion, blackmail, and circulation of explicit content.
+              </p>
 
-          </div>
+              {/* Desktop full copy */}
+              <p className="hidden lg:block text-[#d1d5db] font-light text-sm sm:text-[15px] leading-relaxed">
+                cybercrime cases against women were registered in 2023, including stalking,
+                morphing, blackmail, fake profiles and circulation of explicit content.
+              </p>
+            </div>
+
+            <div className="border-t border-[#1a1a1a] pt-3 sm:pt-4 mt-3 sm:mt-6">
+              <p className="text-[10px] sm:text-[11px] font-normal text-[#9ca3af] tracking-[0.55px] uppercase">
+                SOURCE:{' '}
+                <span className="font-semibold text-[#d1d5db]">
+                  NCRB 2023 (CYBER CRIMES)
+                </span>
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>

@@ -5,6 +5,8 @@ import HowToParticipateSection from '@/components/sections/HowToParticipateSecti
 import WhoWeAreSection from '@/components/sections/WhoWeAreSection';
 import MissionTransitionSection from '@/components/sections/MissionTransitionSection';
 import FactsSection from '@/components/sections/FactsSection';
+import WhatYouCanDoSection from '@/components/sections/WhatYouCanDoSection';
+import Footer from '@/components/common/Footer';
 
 export default function Home() {
   return (
@@ -25,6 +27,12 @@ export default function Home() {
 
       {/* 7. Facts Section (Pure black screen destination) */}
       <FactsSection />
+
+      {/* 8. What You Can Do Section */}
+      <WhatYouCanDoSection />
+
+      {/* 9. Editorial Footer */}
+      <Footer />
     </main>
   );
 }

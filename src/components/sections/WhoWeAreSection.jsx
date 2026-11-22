@@ -45,8 +45,8 @@ export default function WhoWeAreSection({
       {/* Soft Pink Glow - Right Side */}
       <div className="absolute top-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#ff46a2]/20 blur-3xl pointer-events-none select-none" />
 
-      {/* Soft Lilac Glow - Contained within section so it never clips awkwardly into Our Mission */}
-      <div className="absolute bottom-6 sm:bottom-10 left-1/4 sm:left-1/3 w-[450px] sm:w-[580px] h-60 sm:h-72 rounded-full bg-[#7e3bed]/15 blur-3xl pointer-events-none select-none [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+      {/* Soft Lilac Glow - Positioned in center so it fades smoothly without creating any bottom seam */}
+      <div className="absolute top-1/2 -left-20 -translate-y-1/2 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/12 blur-3xl pointer-events-none select-none" />
 
       {/* Decorative Star Accents */}
       {/* Star 1: Top-Left */}

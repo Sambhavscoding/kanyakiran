@@ -77,7 +77,7 @@ export default function OurMissionSection() {
     <section
       ref={sectionRef}
       id="our-mission"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-5 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center pt-5 pb-10 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
       {/* Soft Pink Glow - Left Side */}

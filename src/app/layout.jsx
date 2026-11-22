@@ -1,16 +1,28 @@
 import './globals.css';
 import { JoinModalProvider } from '@/components/forms/JoinModalProvider';
+import Navbar from '@/components/common/Navbar';
 
 export const metadata = {
   title: 'Kanya Kiran | For every woman, but not just for women',
   description:
     'A flagship initiative of KIIT and KISS standing on four pillars: physical safety, education, cyber safety, and psychological & emotional well-being.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-clip">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -19,7 +31,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="bg-[#0e0e0e] text-white font-sans antialiased selection:bg-[#ff46a2] selection:text-white overflow-x-clip max-w-full">
-        <JoinModalProvider>{children}</JoinModalProvider>
+        <JoinModalProvider>
+          <Navbar />
+          {children}
+        </JoinModalProvider>
       </body>
     </html>
   );
