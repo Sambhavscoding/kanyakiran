@@ -105,7 +105,7 @@ export default function FactsSection() {
     <section
       ref={containerRef}
       id="facts"
-      className="relative z-20 w-full bg-[#000000] text-white selection:bg-[#ff46a2] selection:text-white shadow-[0_24px_50px_rgba(0,0,0,0.85)]"
+      className="relative z-20 w-full bg-[#000000] text-white selection:bg-[#fecb34] selection:text-black shadow-[0_24px_50px_rgba(0,0,0,0.85)]"
     >
       {/* ============================================================== */}
       {/* 1. TOP MASTHEAD (Signature blur reveal from darkness)          */}
@@ -203,13 +203,13 @@ export default function FactsSection() {
           <h2 className="font-bodoni font-black uppercase text-3xl sm:text-6xl md:text-7xl lg:text-[84px] tracking-tight leading-[1.2] sm:leading-[1.1] flex flex-col items-center select-none w-full px-2">
             {/* Line 1: ONE RAPE EVERY */}
             <div className="relative inline-block pb-2 sm:pb-3.5">
-              <span className="text-[#ff46a2]">ONE </span>
+              <span className="text-[#fecb34]">ONE </span>
               <span className="text-white">R*PE </span>
               <span className="text-white">EVERY</span>
               
-              {/* Pink Underline revealed with scroll */}
+              {/* Yellow Underline revealed with scroll */}
               <span
-                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)]"
+                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#fecb34] rounded-full shadow-[0_0_16px_rgba(254,203,52,0.7)]"
                 style={{
                   width: '100%',
                   transform: `scaleX(${line1Progress})`,
@@ -220,12 +220,12 @@ export default function FactsSection() {
 
             {/* Line 2: 18 MINUTES. */}
             <div className="relative inline-block pb-2 sm:pb-3.5 mt-1 sm:mt-3">
-              <span className="text-[#ff46a2]">18 </span>
-              <span className="text-[#ff46a2]">MINUTES.</span>
+              <span className="text-[#fecb34]">18 </span>
+              <span className="text-[#fecb34]">MINUTES.</span>
 
-              {/* Pink Underline revealed with scroll */}
+              {/* Yellow Underline revealed with scroll */}
               <span
-                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#ff46a2] rounded-full shadow-[0_0_16px_rgba(255,70,162,0.7)]"
+                className="absolute left-0 bottom-0 h-[3.5px] sm:h-[6px] lg:h-[7px] bg-[#fecb34] rounded-full shadow-[0_0_16px_rgba(254,203,52,0.7)]"
                 style={{
                   width: '100%',
                   transform: `scaleX(${line2Progress})`,
@@ -239,11 +239,11 @@ export default function FactsSection() {
           <div className="mt-6 sm:mt-10">
             <div className="inline-flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 bg-[#0c0c0c] border border-[#2b2b2b] rounded-2xl sm:rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#ff46a2] animate-pulse shrink-0 shadow-[0_0_8px_#ff46a2]" />
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#fecb34] animate-pulse shrink-0 shadow-[0_0_8px_#fecb34]" />
                 <span className="font-mono font-bold text-[11px] sm:text-[13px] tracking-[1px] text-white uppercase">
                   INTERVAL PULSE:
                 </span>
-                <span className="font-mono font-bold text-[11px] sm:text-[13px] tracking-[0.7px] text-[#ff46a2] tabular-nums">
+                <span className="font-mono font-bold text-[11px] sm:text-[13px] tracking-[0.7px] text-[#fecb34] tabular-nums">
                   {formattedCountdown} MINS
                 </span>
               </div>

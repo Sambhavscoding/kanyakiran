@@ -243,7 +243,7 @@ export default function Footer() {
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#ff46a2]/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#fecb34]/10 blur-3xl pointer-events-none" />
 
       {/* ========================================================================= */}
       {/* A. MOBILE VIEW (Left hand on top of quote, Right hand below quote)         */}
@@ -282,7 +282,7 @@ export default function Footer() {
                 opacity: mobileSpotlight.active ? 1 : 0,
               }}
             >
-              <pre className="font-mono text-[4.8px] min-[375px]:text-[5.4px] min-[410px]:text-[6px] text-[#ff46a2] drop-shadow-[0_0_8px_rgba(255,70,162,0.6)] leading-[1.01] tracking-tighter select-none whitespace-pre text-left pl-0">
+              <pre className="font-mono text-[4.8px] min-[375px]:text-[5.4px] min-[410px]:text-[6px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.01] tracking-tighter select-none whitespace-pre text-left pl-0">
                 {LEFT_HAND_MOBILE}
               </pre>
             </div>
@@ -320,7 +320,7 @@ export default function Footer() {
                 opacity: mobileSpotlight.active ? 1 : 0,
               }}
             >
-              <pre className="font-mono text-[4.8px] min-[375px]:text-[5.4px] min-[410px]:text-[6px] text-[#ff46a2] drop-shadow-[0_0_8px_rgba(255,70,162,0.6)] leading-[1.01] tracking-tighter select-none whitespace-pre text-left pr-0 translate-x-1.5">
+              <pre className="font-mono text-[4.8px] min-[375px]:text-[5.4px] min-[410px]:text-[6px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.01] tracking-tighter select-none whitespace-pre text-left pr-0 translate-x-1.5">
                 {RIGHT_HAND_MOBILE}
               </pre>
             </div>
@@ -339,7 +339,7 @@ export default function Footer() {
                 title="Kanya Kiran - Go to Hero"
               >
                 <img
-                  src="https://ik.imagekit.io/9plqngdvcd/Kanya-Kiran-by-KISS-Foundation-Logo-300x2711-1.png"
+                  src="https://ik.imagekit.io/9plqngdvcd/cropped_circle_image.png"
                   alt="Kanya Kiran Logo"
                   className="h-7 w-auto max-w-[85px] object-contain group-hover:scale-105 transition-transform duration-200"
                 />
@@ -422,7 +422,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-7 h-7 rounded-full bg-black/5 hover:bg-[#ff46a2] hover:text-white text-[#374151] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xs active:scale-95"
+                className="w-7 h-7 rounded-full bg-black/5 hover:bg-[#fecb34] hover:text-[#0e0e0e] text-[#374151] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xs active:scale-95"
                 title="Follow on Instagram"
               >
                 <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -463,7 +463,7 @@ export default function Footer() {
                   title="Kanya Kiran - Go to Hero"
                 >
                   <img
-                    src="https://ik.imagekit.io/9plqngdvcd/Kanya-Kiran-by-KISS-Foundation-Logo-300x2711-1.png"
+                    src="https://ik.imagekit.io/9plqngdvcd/cropped_circle_image.png"
                     alt="Kanya Kiran Logo"
                     className="h-8.5 w-auto max-w-[110px] object-contain group-hover:scale-105 transition-transform duration-200"
                   />
@@ -550,7 +550,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-7 h-7 rounded-full bg-black/5 hover:bg-[#ff46a2] hover:text-white text-[#374151] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xs hover:scale-105"
+                  className="w-7 h-7 rounded-full bg-black/5 hover:bg-[#fecb34] hover:text-[#0e0e0e] text-[#374151] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xs hover:scale-105"
                   title="Follow on Instagram"
                 >
                   <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -601,13 +601,13 @@ export default function Footer() {
             }}
           >
             <div className="w-1/2 overflow-hidden flex justify-start">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#ff46a2] drop-shadow-[0_0_8px_rgba(255,70,162,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pl-0">
+              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pl-0">
                 {LEFT_HAND}
               </pre>
             </div>
 
             <div className="w-1/2 overflow-hidden flex justify-end">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#ff46a2] drop-shadow-[0_0_8px_rgba(255,70,162,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pr-0">
+              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pr-0">
                 {RIGHT_HAND}
               </pre>
             </div>

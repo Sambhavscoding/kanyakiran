@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@600;700&display=swap"
         />
       </head>
-      <body className="bg-[#0e0e0e] text-white font-sans antialiased selection:bg-[#ff46a2] selection:text-white overflow-x-clip max-w-full">
+      <body className="bg-[#0e0e0e] text-white font-sans antialiased selection:bg-[#fecb34] selection:text-black overflow-x-clip max-w-full">
         <JoinModalProvider>
           <Navbar />
           {children}

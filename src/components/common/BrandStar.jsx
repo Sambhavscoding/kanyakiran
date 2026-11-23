@@ -4,7 +4,7 @@ import React from 'react';
  * Asterisk / 8-pointed sparkle motif matching the Kanya Kiran brand art
  */
 export default function BrandStar({
-  className = 'w-10 h-10 text-[#ff46a2]',
+  className = 'w-10 h-10 text-[#fecb34]',
   strokeWidth = 3,
   ...props
 }) {

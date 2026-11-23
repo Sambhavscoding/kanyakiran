@@ -15,7 +15,8 @@ const PILLARS_DATA = [
     shortDescription:
       'Immediate safety training, defense workshops, vigilance squads, and zero tolerance for bodily harm.',
     icon: ShieldCheck,
-    bgClass: 'bg-[#ff46a2]', // Vibrant Brand Pink
+    bgClass: 'bg-[#fecb34]', // Vibrant Brand Golden Yellow
+    isDarkText: true,
   },
   {
     id: 2,
@@ -108,7 +109,7 @@ export default function FourPillarsSection() {
       {/* Star 3: Bottom-Right */}
       <div className="absolute bottom-3 right-4 sm:bottom-10 sm:right-12 pointer-events-auto cursor-pointer p-1.5 group z-20">
         <BrandStar
-          className="w-6 h-6 sm:w-26 sm:h-26 lg:w-32 lg:h-32 text-[#ff46a2] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-6 h-6 sm:w-26 sm:h-26 lg:w-32 lg:h-32 text-[#fecb34] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4.5}
         />
       </div>
@@ -156,42 +157,42 @@ export default function FourPillarsSection() {
                   transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
                   transitionDelay: `${index * 160 + 250}ms`,
                 }}
-                className={`relative overflow-hidden flex flex-row sm:flex-col items-center sm:items-stretch justify-between p-3 sm:p-5 lg:p-7 min-h-[86px] sm:min-h-[290px] lg:min-h-[350px] lg:max-h-[385px] rounded-l-2xl rounded-r-[36px] sm:rounded-t-3xl sm:rounded-b-[85px] shadow-md sm:shadow-2xl transition-all sm:hover:-translate-y-2 sm:hover:shadow-[0_24px_48px_rgba(0,0,0,0.25)] group ${pillar.bgClass} text-white ${
+                className={`relative overflow-hidden flex flex-row sm:flex-col items-center sm:items-stretch justify-between p-3 sm:p-5 lg:p-7 min-h-[86px] sm:min-h-[290px] lg:min-h-[350px] lg:max-h-[385px] rounded-l-2xl rounded-r-[36px] sm:rounded-t-3xl sm:rounded-b-[85px] shadow-md sm:shadow-2xl transition-all sm:hover:-translate-y-2 sm:hover:shadow-[0_24px_48px_rgba(0,0,0,0.25)] group ${pillar.bgClass} ${pillar.isDarkText ? 'text-[#0e0e0e]' : 'text-white'} ${
                   isInView
                     ? 'opacity-100 blur-none translate-y-0'
                     : 'opacity-0 blur-[12px] translate-y-6 sm:translate-y-8'
                 }`}
               >
                 {/* Top-Left Watermark Number */}
-                <span className="absolute top-2 left-2.5 sm:top-3.5 sm:left-5 text-2xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white/25 sm:text-white/20 leading-none select-none pointer-events-none z-0">
+                <span className={`absolute top-2 left-2.5 sm:top-3.5 sm:left-5 text-2xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none select-none pointer-events-none z-0 ${pillar.isDarkText ? 'text-black/20' : 'text-white/25 sm:text-white/20'}`}>
                   {pillar.number}
                 </span>
 
                 {/* Content: Subtitle, Title, and Concise Description on mobile */}
                 <div className="relative z-10 flex-1 min-w-0 pr-2.5 sm:pr-0 pt-2.5 sm:pt-7 lg:pt-8 space-y-0.5 sm:space-y-2 lg:space-y-3 text-left">
                   {/* Subtitle / Note */}
-                  <div className="text-[9px] sm:text-xs font-bold uppercase tracking-wider text-white/85">
+                  <div className={`text-[9px] sm:text-xs font-bold uppercase tracking-wider ${pillar.isDarkText ? 'text-black/75' : 'text-white/85'}`}>
                     {pillar.subtitle}
                   </div>
 
                   {/* Verbatim Title */}
-                  <h3 className="text-xs sm:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight sm:leading-snug break-words">
+                  <h3 className={`text-xs sm:text-lg lg:text-xl font-bold tracking-tight leading-tight sm:leading-snug break-words ${pillar.isDarkText ? 'text-[#0e0e0e]' : 'text-white'}`}>
                     {pillar.title}
                   </h3>
 
                   {/* Concise Description on Phone, Full Description on Desktop */}
-                  <p className="block sm:hidden text-[10px] leading-tight text-white/90 line-clamp-2 pt-0.5">
+                  <p className={`block sm:hidden text-[10px] leading-tight line-clamp-2 pt-0.5 ${pillar.isDarkText ? 'text-[#0e0e0e]/90 font-medium' : 'text-white/90'}`}>
                     {pillar.shortDescription}
                   </p>
-                  <p className="hidden sm:block text-xs sm:text-sm leading-relaxed text-white/90 line-clamp-3 sm:line-clamp-4 pt-0.5">
+                  <p className={`hidden sm:block text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 pt-0.5 ${pillar.isDarkText ? 'text-[#0e0e0e]/90 font-medium' : 'text-white/90'}`}>
                     {pillar.description}
                   </p>
                 </div>
 
                 {/* In the End: Semicircular arch with icon button */}
                 <div className="relative z-10 shrink-0 pl-1 sm:pl-0 sm:pt-6 lg:pt-8 flex justify-center items-center">
-                  <div className="w-8 h-8 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-white/20 hover:bg-white/30 border border-white/35 backdrop-blur-sm shadow-md sm:shadow-lg transition-transform duration-200 sm:group-hover:-rotate-12 text-white">
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white stroke-[2.3] transition-transform duration-200 sm:group-hover:rotate-6" />
+                  <div className={`w-8 h-8 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center border backdrop-blur-sm shadow-md sm:shadow-lg transition-transform duration-200 sm:group-hover:-rotate-12 ${pillar.isDarkText ? 'bg-black/10 hover:bg-black/20 border-black/20 text-[#0e0e0e]' : 'bg-white/20 hover:bg-white/30 border-white/35 text-white'}`}>
+                    <Icon className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 stroke-[2.3] transition-transform duration-200 sm:group-hover:rotate-6 ${pillar.isDarkText ? 'text-[#0e0e0e]' : 'text-white'}`} />
                   </div>
                 </div>
               </div>

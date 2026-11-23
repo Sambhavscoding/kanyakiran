@@ -163,7 +163,7 @@ export default function JoinForm({ onDone }) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 w-full rounded-xl bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-500 px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-fuchsia-600/30 transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-300 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-6 w-full rounded-xl bg-gradient-to-r from-violet-600 via-fuchsia-600 to-[#fecb34] px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-white shadow-lg shadow-fuchsia-600/30 transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-300 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Submitting…" : "Submit"}
       </button>

@@ -37,7 +37,7 @@ export function JoinModalProvider({ children }) {
         className="m-auto w-[min(94vw,36rem)] overflow-hidden rounded-3xl border border-fuchsia-400/25 bg-[#140b22]/80 p-0 text-white shadow-[0_0_80px_rgba(168,85,247,0.35)] backdrop-blur-2xl backdrop:bg-[#0a0412]/60 backdrop:backdrop-blur-md"
       >
         {/* thin gradient line on top of the card */}
-        <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500" />
+        <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-[#fecb34]" />
         {/* soft glow behind the content */}
         <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-fuchsia-600/25 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-violet-600/25 blur-3xl" />
@@ -46,7 +46,7 @@ export function JoinModalProvider({ children }) {
           <div className="mb-6 flex items-start justify-between gap-4">
             <div>
               <h2 id="join-title" className="text-3xl font-bold tracking-tight">
-                Join the <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">Movement</span>
+                Join the <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-[#fecb34] bg-clip-text text-transparent">Movement</span>
               </h2>
               <p className="mt-1 text-sm text-fuchsia-200/70">#AbAurNahi &nbsp; #GirlsWhoInspire</p>
             </div>

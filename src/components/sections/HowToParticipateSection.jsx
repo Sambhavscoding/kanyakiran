@@ -87,8 +87,8 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
       className="relative w-full max-w-full min-h-[100dvh] lg:min-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
-      {/* Pink tint on the LEFT */}
-      <div className="absolute top-10 -left-20 w-80 h-80 sm:w-[460px] sm:h-[460px] rounded-full bg-[#ff46a2]/25 blur-3xl pointer-events-none select-none" />
+      {/* Golden tint on the LEFT */}
+      <div className="absolute top-10 -left-20 w-80 h-80 sm:w-[460px] sm:h-[460px] rounded-full bg-[#fecb34]/25 blur-3xl pointer-events-none select-none" />
       
       {/* Soft bottom glow - Bleeds down smoothly into Who We Are section */}
       <div className="absolute -bottom-32 sm:-bottom-40 left-1/4 sm:left-1/3 w-[500px] sm:w-[620px] h-80 sm:h-96 rounded-full bg-[#7e3bed]/20 blur-3xl pointer-events-none select-none z-10" />
@@ -105,7 +105,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
       {/* Star 2: Bottom-Right */}
       <div className="absolute bottom-4 right-4 sm:bottom-12 sm:right-12 pointer-events-auto cursor-pointer p-1.5 group z-20">
         <BrandStar
-          className="w-6 h-6 sm:w-22 sm:h-22 lg:w-28 lg:h-28 text-[#ff46a2] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-6 h-6 sm:w-22 sm:h-22 lg:w-28 lg:h-28 text-[#fecb34] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4.5}
         />
       </div>
@@ -128,7 +128,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
         >
           <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem] font-black tracking-tight text-[#0e0e0e] uppercase leading-tight">
             HOW TO{' '}
-            <span className="text-[#ff46a2] underline decoration-[#ff46a2] decoration-[4px] sm:decoration-[5px] underline-offset-4">
+            <span className="text-[#fecb34] underline decoration-[#fecb34] decoration-[4px] sm:decoration-[5px] underline-offset-4">
               PARTICIPATE
             </span>
           </h2>
@@ -215,9 +215,9 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
                 </div>
               </div>
 
-              {/* Card 3: Right Tilt (+3deg) - Rich Violet with Pink Border */}
+              {/* Card 3: Right Tilt (+3deg) - Rich Violet with Golden Border */}
               <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[290px] lg:w-[320px] md:shrink-0 md:p-0 md:block">
-                <div className="w-[275px] xs:w-[295px] sm:w-[315px] md:w-full bg-[#5e26bd] border-[3px] border-[#ff46a2]/80 rounded-2xl p-2.5 sm:p-3 shadow-xl shadow-[#ff46a2]/20 relative rotate-1 md:rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer group">
+                <div className="w-[275px] xs:w-[295px] sm:w-[315px] md:w-full bg-[#5e26bd] border-[3px] border-[#fecb34]/80 rounded-2xl p-2.5 sm:p-3 shadow-xl shadow-[#fecb34]/20 relative rotate-1 md:rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer group">
                   {/* Washi Tape Pin Accent */}
                   <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-4 sm:h-5 bg-white/85 backdrop-blur-xs border border-white/40 rounded-xs shadow-xs -rotate-3 pointer-events-none z-20" />
                   
@@ -252,7 +252,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
                 aria-label={`Go to polaroid ${idx + 1}`}
                 className={`transition-all duration-300 rounded-full h-2 cursor-pointer ${
                   activeMobileIndex === idx
-                    ? 'w-6 bg-[#ff46a2] shadow-xs'
+                    ? 'w-6 bg-[#fecb34] shadow-xs'
                     : 'w-2 bg-[#7e3bed]/30 hover:bg-[#7e3bed]/50'
                 }`}
               />
@@ -301,7 +301,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
 
           {/* Directional Flow Connector Arrow (1 col) */}
           <div className="lg:col-span-1 hidden lg:flex justify-center items-center">
-            <div className="w-9 h-9 rounded-full bg-[#ff46a2] text-white flex items-center justify-center shadow-md shadow-[#ff46a2]/30 ring-4 ring-[#ff46a2]/20 shrink-0">
+            <div className="w-9 h-9 rounded-full bg-[#fecb34] text-[#0e0e0e] flex items-center justify-center shadow-md shadow-[#fecb34]/30 ring-4 ring-[#fecb34]/20 shrink-0">
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
           {/* Step 2 Column (5 cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-2.5">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#ff46a2] text-white flex items-center justify-center font-bold text-base shadow-sm shadow-[#ff46a2]/30 ring-4 ring-[#ff46a2]/25 shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#fecb34] text-[#0e0e0e] flex items-center justify-center font-bold text-base shadow-sm shadow-[#fecb34]/30 ring-4 ring-[#fecb34]/25 shrink-0">
                 2
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#0e0e0e] tracking-tight">
@@ -328,14 +328,14 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
 
             {/* Direct Entry Email Box */}
             <div className="bg-[#171717] text-white rounded-xl px-3.5 py-2.5 flex items-center gap-2 shadow-sm text-xs sm:text-sm">
-              <Mail className="w-4 h-4 text-[#ff46a2] shrink-0" />
+              <Mail className="w-4 h-4 text-[#fecb34] shrink-0" />
               <div className="flex items-center gap-1.5 flex-wrap">
                 <span className="text-[#a3a3a3]">Direct Entry:</span>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=kanya.kiran@kiit.ac.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ff46a2] font-bold underline hover:text-pink-300 transition-colors"
+                  className="text-[#fecb34] font-bold underline hover:text-amber-200 transition-colors"
                 >
                   kanya.kiran@kiit.ac.in
                 </a>

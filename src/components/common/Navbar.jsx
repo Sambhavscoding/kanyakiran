@@ -77,7 +77,7 @@ export default function Navbar() {
               onClick={(e) => handleScrollTo(e, '#hero')}
             >
               <img
-                src="https://ik.imagekit.io/9plqngdvcd/Kanya-Kiran-by-KISS-Foundation-Logo-300x2711-1.png"
+                src="https://ik.imagekit.io/9plqngdvcd/cropped_circle_image.png"
                 alt="Kanya Kiran Logo"
                 className="h-7 sm:h-8 w-auto max-w-[85px] sm:max-w-[100px] object-contain group-hover:scale-105 transition-transform duration-200"
               />

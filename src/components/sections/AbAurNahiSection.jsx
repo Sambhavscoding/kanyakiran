@@ -40,7 +40,7 @@ export default function AbAurNahiSection() {
       className="relative w-full max-w-full min-h-[100dvh] lg:h-screen bg-transparent text-[#111827] overflow-visible flex items-center py-6 sm:py-8 lg:py-0"
     >
       {/* Decorative Faded Quarter-Circle on Bottom Right - Overlapping into Four Pillars */}
-      <div className="absolute -bottom-36 sm:-bottom-52 lg:-bottom-64 right-0 w-80 h-80 sm:w-[500px] sm:h-[500px] lg:w-[650px] lg:h-[650px] rounded-full bg-gradient-to-tl from-[#7e3bed]/45 via-[#ff46a2]/30 to-transparent blur-3xl pointer-events-none select-none z-10" />
+      <div className="absolute -bottom-36 sm:-bottom-52 lg:-bottom-64 right-0 w-80 h-80 sm:w-[500px] sm:h-[500px] lg:w-[650px] lg:h-[650px] rounded-full bg-gradient-to-tl from-[#7e3bed]/45 via-[#fecb34]/30 to-transparent blur-3xl pointer-events-none select-none z-10" />
 
       {/* Decorative Star Accents - Bottom Right Star with Tilt & Brightness (Visible on Mobile) */}
       <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-16 pointer-events-auto cursor-pointer p-1.5 group z-20">
@@ -77,9 +77,9 @@ export default function AbAurNahiSection() {
                 }}
               />
 
-              {/* Layer 2: Signature Magenta/Pink Torn Paper Accent (#ff46a2) */}
+              {/* Layer 2: Signature Magenta/Pink Torn Paper Accent (#fecb34) */}
               <div 
-                className="absolute inset-1.5 sm:inset-2.5 bg-[#ff46a2] shadow-sm rotate-1 sm:group-hover:rotate-0 transition-transform duration-200 pointer-events-none opacity-85 rounded-xl"
+                className="absolute inset-1.5 sm:inset-2.5 bg-[#fecb34] shadow-sm rotate-1 sm:group-hover:rotate-0 transition-transform duration-200 pointer-events-none opacity-85 rounded-xl"
                 style={{
                   clipPath: 'polygon(0% 2%, 96% 0%, 100% 20%, 97% 45%, 100% 70%, 95% 95%, 2% 100%, 0% 50%)'
                 }}

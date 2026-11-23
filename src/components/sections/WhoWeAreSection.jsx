@@ -42,8 +42,8 @@ export default function WhoWeAreSection({
       className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-5 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
-      {/* Soft Pink Glow - Right Side */}
-      <div className="absolute top-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#ff46a2]/20 blur-3xl pointer-events-none select-none" />
+      {/* Soft Golden Glow - Right Side */}
+      <div className="absolute top-1/4 -right-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#fecb34]/20 blur-3xl pointer-events-none select-none" />
 
       {/* Soft Lilac Glow - Positioned in center so it fades smoothly without creating any bottom seam */}
       <div className="absolute top-1/2 -left-20 -translate-y-1/2 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/12 blur-3xl pointer-events-none select-none" />
@@ -60,7 +60,7 @@ export default function WhoWeAreSection({
       {/* Star 2: Top-Right Floating Accent */}
       <div className="absolute top-8 right-6 sm:right-20 pointer-events-auto cursor-pointer p-1 group z-20 hidden sm:block">
         <BrandStar
-          className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff46a2] opacity-30 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-6 h-6 sm:w-8 sm:h-8 text-[#fecb34] opacity-30 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4}
         />
       </div>
@@ -68,7 +68,7 @@ export default function WhoWeAreSection({
       {/* Star 3: Bottom-Right */}
       <div className="absolute bottom-3 right-3 sm:bottom-8 sm:right-8 pointer-events-auto cursor-pointer p-1.5 group z-20">
         <BrandStar
-          className="w-5 h-5 sm:w-18 sm:h-18 lg:w-22 lg:h-22 text-[#ff46a2] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-5 h-5 sm:w-18 sm:h-18 lg:w-22 lg:h-22 text-[#fecb34] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4.5}
         />
       </div>
@@ -100,7 +100,7 @@ export default function WhoWeAreSection({
           <h2 className="text-2xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.9rem] font-black tracking-tight text-[#0e0e0e] leading-tight">
             A Platform <span className="text-[#7e3bed]">For</span>{' '}
             <span className="relative inline-block ml-0.5 sm:ml-1">
-              <span className="absolute bottom-1 sm:bottom-1.5 left-0 right-0 h-2.5 sm:h-3 bg-[#ff46a2]/40 rounded-xs -z-0" />
+              <span className="absolute bottom-1 sm:bottom-1.5 left-0 right-0 h-2.5 sm:h-3 bg-[#fecb34]/40 rounded-xs -z-0" />
               <span className="relative z-10 text-[#7e3bed]">Everyone</span>
             </span>
           </h2>
@@ -130,10 +130,10 @@ export default function WhoWeAreSection({
               {/* Cube 1 (Row 1, Col 1): Content 1 (100% Commitment to Safety) */}
               <div className="aspect-square bg-[#212124] border border-white/10 rounded-[18px] xs:rounded-[22px] p-3 xs:p-3.5 flex flex-col justify-between relative overflow-hidden shadow-lg shadow-black/20 group">
                 {/* Inner corner glow */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-[#ff46a2]/15 blur-xl rounded-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-[#fecb34]/15 blur-xl rounded-full pointer-events-none" />
                 
                 <div className="space-y-1 relative z-10">
-                  <div className="text-2xl xs:text-3xl font-black text-[#ff46a2] tracking-tight leading-none">
+                  <div className="text-2xl xs:text-3xl font-black text-[#fecb34] tracking-tight leading-none">
                     100%
                   </div>
                   <div className="text-[9.5px] xs:text-[10.5px] font-bold uppercase tracking-wider text-white/90 leading-tight">
@@ -154,14 +154,14 @@ export default function WhoWeAreSection({
                 </div>
               </div>
 
-              {/* Cube 2 (Row 1, Col 2): Image 1 (Pink Photo Cube) */}
-              <div className="aspect-square rounded-[18px] xs:rounded-[22px] overflow-hidden relative shadow-lg group bg-[#ff46a2]">
+              {/* Cube 2 (Row 1, Col 2): Image 1 (Golden Photo Cube) */}
+              <div className="aspect-square rounded-[18px] xs:rounded-[22px] overflow-hidden relative shadow-lg group bg-[#fecb34]">
                 <img
                   src={image2}
                   alt="Girls Education and Safety"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-[#ff46a2] mix-blend-multiply opacity-55 pointer-events-none" />
+                <div className="absolute inset-0 bg-[#fecb34] mix-blend-multiply opacity-55 pointer-events-none" />
               </div>
 
               {/* Cube 3 (Row 2, Col 1): Image 2 (Violet Photo Cube) */}
@@ -195,8 +195,8 @@ export default function WhoWeAreSection({
                   <span className="text-[8.5px] xs:text-[9.5px] font-semibold text-white/50 uppercase tracking-wide">
                     Impact
                   </span>
-                  <div className="w-5 h-5 xs:w-6 xs:h-6 rounded-full bg-[#ff46a2] text-white flex items-center justify-center shrink-0 shadow-xs">
-                    <Star className="w-2.5 h-2.5 xs:w-3 xs:h-3 fill-white text-white" />
+                  <div className="w-5 h-5 xs:w-6 xs:h-6 rounded-full bg-[#fecb34] text-[#0e0e0e] flex items-center justify-center shrink-0 shadow-xs">
+                    <Star className="w-2.5 h-2.5 xs:w-3 xs:h-3 fill-[#0e0e0e] text-[#0e0e0e]" />
                   </div>
                 </div>
               </div>
@@ -208,10 +208,10 @@ export default function WhoWeAreSection({
             {/* Card 1: Left Dark Stat Card */}
             <div className="w-full flex flex-col gap-2.5">
               <div className="bg-[#212124] border border-white/5 rounded-[22px] p-4.5 xl:p-5 shadow-xl shadow-black/15 flex flex-col justify-between h-[300px] xl:h-[325px] relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-28 h-28 bg-[#ff46a2]/10 blur-2xl rounded-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-28 h-28 bg-[#fecb34]/10 blur-2xl rounded-full pointer-events-none" />
 
                 <div className="space-y-2 lg:space-y-2.5 relative z-10">
-                  <div className="text-3xl lg:text-[36px] xl:text-[40px] font-black text-[#ff46a2] tracking-tight leading-none">
+                  <div className="text-3xl lg:text-[36px] xl:text-[40px] font-black text-[#fecb34] tracking-tight leading-none">
                     100%
                   </div>
                   <div className="text-xs font-bold uppercase tracking-wider text-white/90 leading-tight">
@@ -240,14 +240,14 @@ export default function WhoWeAreSection({
               </div>
             </div>
 
-            {/* Card 2: Lime/Pink Tinted Photo Card */}
-            <div className="w-full h-[315px] xl:h-[345px] rounded-[22px] overflow-hidden relative shadow-lg group bg-[#ff46a2]">
+            {/* Card 2: Lime/Golden Tinted Photo Card */}
+            <div className="w-full h-[315px] xl:h-[345px] rounded-[22px] overflow-hidden relative shadow-lg group bg-[#fecb34]">
               <img
                 src={image2}
                 alt="Girls Education and Safety"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-[#ff46a2] mix-blend-multiply opacity-55 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#fecb34] mix-blend-multiply opacity-55 pointer-events-none" />
             </div>
 
             {/* Card 3: Center Compact Card */}
@@ -288,16 +288,16 @@ export default function WhoWeAreSection({
                 </div>
 
                 <div className="border-t border-white/10 pt-3 flex items-center justify-between relative z-10">
-                  <div className="w-7 h-7 rounded-full bg-[#ff46a2] text-white flex items-center justify-center shadow-xs">
-                    <Star className="w-3.5 h-3.5 fill-white text-white" />
+                  <div className="w-7 h-7 rounded-full bg-[#fecb34] text-[#0e0e0e] flex items-center justify-center shadow-xs">
+                    <Star className="w-3.5 h-3.5 fill-[#0e0e0e] text-[#0e0e0e]" />
                   </div>
                 </div>
               </div>
 
               {/* Mini Pill Callout 2 */}
-              <div className="h-[46px] bg-[#ff46a2]/15 border border-[#ff46a2]/30 rounded-2xl px-3 py-1.5 flex items-center gap-2.5 w-full shadow-xs">
-                <div className="w-6 h-6 rounded-full bg-[#ff46a2] text-white flex items-center justify-center shrink-0">
-                  <Star className="w-3 h-3 fill-white text-white" />
+              <div className="h-[46px] bg-[#fecb34]/15 border border-[#fecb34]/30 rounded-2xl px-3 py-1.5 flex items-center gap-2.5 w-full shadow-xs">
+                <div className="w-6 h-6 rounded-full bg-[#fecb34] text-[#0e0e0e] flex items-center justify-center shrink-0">
+                  <Star className="w-3 h-3 fill-[#0e0e0e] text-[#0e0e0e]" />
                 </div>
                 <div className="text-[11px] font-semibold text-[#1f2937] leading-tight">
                   You can be a source of safe support

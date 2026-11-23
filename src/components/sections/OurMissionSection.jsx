@@ -80,8 +80,8 @@ export default function OurMissionSection() {
       className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center pt-5 pb-10 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
-      {/* Soft Pink Glow - Left Side */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#ff46a2]/20 blur-3xl pointer-events-none select-none" />
+      {/* Soft Golden Glow - Left Side */}
+      <div className="absolute top-1/4 -left-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#fecb34]/20 blur-3xl pointer-events-none select-none" />
       <div className="absolute -bottom-16 left-1/3 w-80 h-80 rounded-full bg-[#7e3bed]/10 blur-3xl pointer-events-none select-none" />
 
       {/* Decorative Signature Doodle Loops from Figma */}
@@ -110,14 +110,14 @@ export default function OurMissionSection() {
 
       <div className="absolute top-8 right-6 sm:right-20 pointer-events-auto cursor-pointer p-1 group z-20 hidden sm:block">
         <BrandStar
-          className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff46a2] opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-6 h-6 sm:w-8 sm:h-8 text-[#fecb34] opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4}
         />
       </div>
 
       <div className="absolute bottom-3 right-3 sm:bottom-8 sm:right-8 pointer-events-auto cursor-pointer p-1.5 group z-20">
         <BrandStar
-          className="w-5 h-5 sm:w-18 sm:h-18 lg:w-22 lg:h-22 text-[#ff46a2] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
+          className="w-5 h-5 sm:w-18 sm:h-18 lg:w-22 lg:h-22 text-[#fecb34] opacity-50 sm:opacity-35 group-hover:opacity-100 group-hover:-rotate-12 transition-all duration-200"
           strokeWidth={4.5}
         />
       </div>
@@ -138,10 +138,10 @@ export default function OurMissionSection() {
               : 'opacity-0 blur-[12px] translate-y-6'
           }`}
         >
-          {/* Heading with pink accent underline */}
+          {/* Heading with golden accent underline */}
           <h2 className="text-2xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.9rem] font-black tracking-tight text-[#0e0e0e] leading-tight uppercase">
             OUR{' '}
-            <span className="text-[#7e3bed] underline decoration-[#ff46a2] decoration-4 underline-offset-6">
+            <span className="text-[#7e3bed] underline decoration-[#fecb34] decoration-4 underline-offset-6">
               MISSION
             </span>
           </h2>
@@ -236,7 +236,7 @@ export default function OurMissionSection() {
               <div className="mt-2.5 text-center px-1">
                 <p className="text-xs text-[#262626] leading-relaxed font-medium">
                   To foster an environment of{' '}
-                  <span className="text-[#ff46a2] font-black tracking-wide">
+                  <span className="text-[#fecb34] font-black tracking-wide">
                     ZERO TOLERANCE
                   </span>{' '}
                   towards violence, discrimination, harassment, and practices that undermine the safety, dignity, and rights of girls.
@@ -411,7 +411,7 @@ export default function OurMissionSection() {
               <div className="relative z-10 w-full text-center px-4 pt-2 pb-1">
                 <p className="text-xs sm:text-[13px] xl:text-[14px] text-[#262626] leading-relaxed max-w-lg mx-auto font-medium">
                   To foster an environment of{' '}
-                  <span className="text-[#ff46a2] font-black tracking-wide">
+                  <span className="text-[#fecb34] font-black tracking-wide">
                     ZERO TOLERANCE
                   </span>{' '}
                   towards violence, discrimination, harassment, and practices that undermine the safety, dignity, and rights of girls.

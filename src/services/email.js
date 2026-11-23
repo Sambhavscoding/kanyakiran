@@ -4,7 +4,7 @@ import path from "node:path";
 
 // ---- Team: edit the values in this block only ----
 const BRAND = {
-  pink: "#ff46a2",
+  pink: "#fecb34",
   accent: "#7c3aed", // purple used for the coloured words and links
   dark: "#0e0e0e",
   text: "#222222",
