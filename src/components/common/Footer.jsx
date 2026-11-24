@@ -79,6 +79,15 @@ const RIGHT_HAND_MOBILE = RIGHT_HAND.split('\n')
   .filter((_, idx) => idx >= 7)
   .join('\n');
 
+// Cleaned versions for desktop: strips vertical blank offsets so both hands sit level and never collide with the watermark
+const LEFT_HAND_DESKTOP = LEFT_HAND.split('\n')
+  .filter((_, idx) => idx <= 18)
+  .join('\n');
+
+const RIGHT_HAND_DESKTOP = RIGHT_HAND.split('\n')
+  .filter((_, idx) => idx >= 7 && idx <= 26)
+  .join('\n');
+
 export default function Footer() {
   const footerRef = useRef(null);
   const handsContainerRef = useRef(null);
@@ -239,7 +248,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full h-auto min-h-[100dvh] md:h-[100dvh] md:max-h-[100dvh] md:min-h-[100dvh] bg-transparent text-[#0e0e0e] overflow-x-hidden md:overflow-hidden flex flex-col justify-between select-none"
+      className="relative w-full h-auto min-h-[100dvh] lg:h-[100dvh] lg:max-h-[100dvh] bg-transparent text-[#0e0e0e] overflow-x-hidden md:overflow-hidden flex flex-col justify-between select-none"
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full bg-[#7e3bed]/10 blur-3xl pointer-events-none" />
@@ -436,10 +445,10 @@ export default function Footer() {
 
         </div>
 
-        {/* 3. Bottom Watermark (Mobile) - Flush to very bottom edge of screen, NO negative space below */}
+        {/* 3. Bottom Watermark (Mobile) - 70% visible, 30% submerged below edge */}
         <div className="w-full overflow-hidden flex justify-center items-end pointer-events-none select-none shrink-0 pb-0">
-          <h1 className="text-[13.5vw] font-black tracking-tighter text-[#7e3bed]/[0.08] leading-[0.72] uppercase whitespace-nowrap translate-y-[8%]">
-            KanyaKiran
+          <h1 className="text-[13.5vw] font-black tracking-tighter text-[#7e3bed]/[0.08] leading-[0.72] uppercase whitespace-nowrap translate-y-[30%]">
+            KANYAKIRAN
           </h1>
         </div>
 
@@ -448,7 +457,7 @@ export default function Footer() {
       {/* ========================================================================= */}
       {/* B. DESKTOP VIEW (3-Column Top, Hands + Center Quote, Giant Watermark)      */}
       {/* ========================================================================= */}
-      <div className="hidden md:flex flex-col justify-between h-full w-full pt-20 sm:pt-24 md:pt-28 pb-0">
+      <div className="hidden md:flex flex-col justify-between h-full w-full pt-16 sm:pt-20 md:pt-20 lg:pt-24 pb-0">
         
         {/* 1. TOP SECTION (3 Columns, safely below floating navbar) */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20 shrink-0">
@@ -565,29 +574,29 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 2. MIDDLE SECTION: Hands Starting From EXTREME EDGES + Parallax + Interactive Baby-Pink Hover */}
+        {/* 2. MIDDLE SECTION: Hands Starting From EXTREME EDGES + Parallax + Interactive Hover */}
         <div
           ref={handsContainerRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className="relative w-full flex-1 flex flex-col justify-center items-center overflow-hidden my-auto py-1 px-0 cursor-default"
+          className="relative w-full flex-1 flex flex-col justify-center items-center overflow-hidden my-auto py-2 px-0 cursor-default"
         >
           {/* Layer A: Base Violet ASCII Hands */}
           <div className="w-full flex items-center justify-between pointer-events-none px-0">
             <div ref={leftHandRef} className="w-1/2 overflow-hidden flex justify-start will-change-transform">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#7e3bed] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pl-0">
-                {LEFT_HAND}
+              <pre className="font-mono text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-[#7e3bed] leading-[1.02] tracking-tighter select-none whitespace-pre text-left pl-0">
+                {LEFT_HAND_DESKTOP}
               </pre>
             </div>
 
             <div ref={rightHandRef} className="w-1/2 overflow-hidden flex justify-end will-change-transform">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#7e3bed] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pr-0">
-                {RIGHT_HAND}
+              <pre className="font-mono text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-[#7e3bed] leading-[1.02] tracking-tighter select-none whitespace-pre text-left pr-0">
+                {RIGHT_HAND_DESKTOP}
               </pre>
             </div>
           </div>
 
-          {/* Layer B: Interactive Baby Pink Overlay (65px focused spotlight radius) */}
+          {/* Layer B: Interactive Spotlight Overlay */}
           <div
             className="absolute inset-0 w-full h-full flex items-center justify-between pointer-events-none px-0 transition-opacity duration-200"
             style={{
@@ -601,14 +610,14 @@ export default function Footer() {
             }}
           >
             <div className="w-1/2 overflow-hidden flex justify-start">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pl-0">
-                {LEFT_HAND}
+              <pre className="font-mono text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.02] tracking-tighter select-none whitespace-pre text-left pl-0">
+                {LEFT_HAND_DESKTOP}
               </pre>
             </div>
 
             <div className="w-1/2 overflow-hidden flex justify-end">
-              <pre className="font-mono text-[8px] md:text-[9.5px] lg:text-[10.5px] xl:text-[11.5px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.05] tracking-tighter select-none whitespace-pre text-left pr-0">
-                {RIGHT_HAND}
+              <pre className="font-mono text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px] text-[#fecb34] drop-shadow-[0_0_8px_rgba(254,203,52,0.6)] leading-[1.02] tracking-tighter select-none whitespace-pre text-left pr-0">
+                {RIGHT_HAND_DESKTOP}
               </pre>
             </div>
           </div>
@@ -626,10 +635,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 3. BOTTOM SECTION: Giant "KanyaKiran" Typography (Desktop) */}
-        <div className="relative w-full overflow-hidden flex justify-center items-end pointer-events-none select-none shrink-0">
-          <h1 className="text-[12.5vw] sm:text-[14vw] font-black tracking-tighter text-[#7e3bed]/[0.08] leading-[0.72] uppercase whitespace-nowrap translate-y-[8%]">
-            KanyaKiran
+        {/* 3. BOTTOM SECTION: Giant "KANYAKIRAN" Typography (Desktop) - 70% visible, 30% submerged below edge */}
+        <div className="relative w-full overflow-hidden flex justify-center items-end pointer-events-none select-none shrink-0 pb-0">
+          <h1 className="text-[13vw] sm:text-[14vw] font-black tracking-tighter text-[#7e3bed]/[0.08] leading-[0.72] uppercase whitespace-nowrap translate-y-[30%]">
+            KANYAKIRAN
           </h1>
         </div>
 

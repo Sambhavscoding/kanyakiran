@@ -24,7 +24,7 @@ export default function WhatYouCanDoSection() {
   return (
     <section
       id="what-you-can-do"
-      className="relative z-10 w-full max-w-full min-h-[100dvh] lg:h-screen flex flex-col justify-center bg-transparent text-[#0e0e0e] py-6 sm:py-8 md:py-0 px-3 sm:px-6 lg:px-8 overflow-hidden select-none"
+      className="relative z-10 w-full max-w-full min-h-[100dvh] lg:min-h-screen bg-transparent text-[#0e0e0e] flex flex-col justify-center py-10 sm:py-16 lg:py-12 px-3 sm:px-6 lg:px-8 overflow-hidden select-none"
     >
       {/* Top shadow gradient cast from FactsSection (prominent on phone and desktop) */}
       <div className="absolute top-0 left-0 right-0 h-10 sm:h-16 lg:h-20 bg-gradient-to-b from-black/40 via-black/10 to-transparent pointer-events-none z-20" />

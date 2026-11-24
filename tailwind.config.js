@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-andika)', 'Andika', 'sans-serif'],
+        sans: ['var(--font-biryani)', 'Biryani', 'var(--font-andika)', 'sans-serif'],
         handwriting: ['var(--font-caveat)', 'Caveat', 'Dancing Script', 'cursive'],
         bodoni: ["'Bodoni Moda'", 'serif'],
       },

@@ -164,9 +164,9 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
             onScroll={handleMobileScroll}
             className="w-full overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden no-scrollbar scroll-smooth pt-8 pb-10 md:pt-4 md:pb-14 px-0 md:px-6 -mb-4 md:-mb-8"
           >
-            <div className="flex items-center min-w-full md:min-w-max mx-auto md:justify-center md:gap-6 lg:gap-8">
+            <div className="flex items-center min-w-full md:min-w-max mx-auto md:justify-center md:gap-4 lg:gap-8">
               {/* Card 1: Left Tilt (-3deg) - Violet Frame */}
-              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[290px] lg:w-[320px] md:shrink-0 md:p-0 md:block">
+              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[225px] lg:w-[280px] xl:w-[320px] md:shrink-0 md:p-0 md:block">
                 <div className="w-[275px] xs:w-[295px] sm:w-[315px] md:w-full bg-[#7e3bed] border-[3px] border-[#7e3bed] rounded-2xl p-2.5 sm:p-3 shadow-xl shadow-[#7e3bed]/25 relative -rotate-1 md:-rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer group">
                   {/* Washi Tape Pin Accent */}
                   <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-4 sm:h-5 bg-white/85 backdrop-blur-xs border border-white/40 rounded-xs shadow-xs -rotate-2 pointer-events-none z-20" />
@@ -191,7 +191,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
               </div>
 
               {/* Card 2: Center Upright (+1deg tilt) - Deep Black Frame */}
-              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[290px] lg:w-[320px] md:shrink-0 md:p-0 md:block">
+              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[225px] lg:w-[280px] xl:w-[320px] md:shrink-0 md:p-0 md:block">
                 <div className="w-[275px] xs:w-[295px] sm:w-[315px] md:w-full bg-[#0e0e0e] border-[3px] border-[#7e3bed]/75 rounded-2xl p-2.5 sm:p-3 shadow-2xl shadow-black/35 relative rotate-1 hover:rotate-0 transition-transform duration-300 cursor-pointer group z-10">
                   {/* Washi Tape Pin Accent */}
                   <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-4 sm:h-5 bg-white/85 backdrop-blur-xs border border-white/40 rounded-xs shadow-xs rotate-2 pointer-events-none z-20" />
@@ -216,7 +216,7 @@ export default function HowToParticipateSection({ onOpenRegisterModal }) {
               </div>
 
               {/* Card 3: Right Tilt (+3deg) - Rich Violet with Golden Border */}
-              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[290px] lg:w-[320px] md:shrink-0 md:p-0 md:block">
+              <div className="w-full shrink-0 snap-center flex justify-center px-4 md:w-[225px] lg:w-[280px] xl:w-[320px] md:shrink-0 md:p-0 md:block">
                 <div className="w-[275px] xs:w-[295px] sm:w-[315px] md:w-full bg-[#5e26bd] border-[3px] border-[#fecb34]/80 rounded-2xl p-2.5 sm:p-3 shadow-xl shadow-[#fecb34]/20 relative rotate-1 md:rotate-3 hover:rotate-0 transition-transform duration-300 cursor-pointer group">
                   {/* Washi Tape Pin Accent */}
                   <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-4 sm:h-5 bg-white/85 backdrop-blur-xs border border-white/40 rounded-xs shadow-xs -rotate-3 pointer-events-none z-20" />

@@ -39,7 +39,7 @@ export default function WhoWeAreSection({
     <section
       ref={sectionRef}
       id="who-we-are"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center py-5 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:min-h-screen bg-transparent text-[#0e0e0e] overflow-visible flex flex-col justify-center py-10 sm:py-16 lg:py-12 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
       {/* Soft Golden Glow - Right Side */}
@@ -89,8 +89,8 @@ export default function WhoWeAreSection({
               : 'opacity-0 blur-[12px] translate-y-6'
           }`}
         >
-          {/* Who We Are Pill styled same like Structure & Organisation pill */}
-          <div className="inline-flex items-center justify-center -rotate-1 hover:rotate-1 transition-transform duration-200 select-none cursor-pointer">
+          {/* Who We Are Pill - Lifted slightly up for breathing room */}
+          <div className="inline-flex items-center justify-center -rotate-1 hover:rotate-1 transition-transform duration-200 select-none cursor-pointer mb-3.5 sm:mb-4 lg:mb-5">
             <div className="bg-[#d3bbff] text-[#2e0854] px-4 py-1.5 sm:px-5 sm:py-2 rounded-2xl font-bold text-[11px] sm:text-xs md:text-sm tracking-wide shadow-md uppercase">
               WHO WE ARE
             </div>
@@ -125,7 +125,7 @@ export default function WhoWeAreSection({
           }`}
         >
           {/* MOBILE VIEW: Exactly 4 cubes in a 2x2 grid (One diagonal with 2 images, the other 2 with content) */}
-          <div className="block lg:hidden w-full max-w-[340px] xs:max-w-[370px] sm:max-w-[420px] mx-auto px-1">
+          <div className="block lg:hidden w-full max-w-[340px] xs:max-w-[370px] sm:max-w-[480px] md:max-w-[540px] mx-auto px-1">
             <div className="grid grid-cols-2 gap-2.5 xs:gap-3 w-full">
               {/* Cube 1 (Row 1, Col 1): Content 1 (100% Commitment to Safety) */}
               <div className="aspect-square bg-[#212124] border border-white/10 rounded-[18px] xs:rounded-[22px] p-3 xs:p-3.5 flex flex-col justify-between relative overflow-hidden shadow-lg shadow-black/20 group">

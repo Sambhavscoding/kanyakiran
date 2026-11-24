@@ -87,7 +87,7 @@ export default function FourPillarsSection() {
     <section
       ref={sectionRef}
       id="four-pillars"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen bg-transparent text-[#111827] overflow-visible flex flex-col justify-center py-6 lg:py-0 -mt-[2px]"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:min-h-screen bg-transparent text-[#111827] overflow-visible flex flex-col justify-center py-10 sm:py-16 lg:py-12 -mt-[2px]"
     >
       {/* Decorative Star Accents */}
       {/* Star 1: Top-Left */}
@@ -124,7 +124,7 @@ export default function FourPillarsSection() {
             transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
             transitionDelay: '150ms',
           }}
-          className={`order-1 sm:order-2 mb-3.5 sm:mb-0 sm:mt-8 lg:mt-10 text-center max-w-3xl mx-auto space-y-1 sm:space-y-2 transition-all ${
+          className={`order-1 sm:order-2 mb-4 sm:mb-6 lg:mb-0 sm:mt-6 lg:mt-8 text-center max-w-3xl mx-auto space-y-1.5 sm:space-y-2 transition-all ${
             isInView
               ? 'opacity-100 blur-none translate-y-0'
               : 'opacity-0 blur-[12px] translate-y-6'
@@ -146,7 +146,7 @@ export default function FourPillarsSection() {
         </div>
 
         {/* Curtains Row: order-2 on mobile (BELOW heading), order-1 on desktop (TOP) */}
-        <div className="order-2 sm:order-1 relative z-30 grid grid-cols-1 sm:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6">
+        <div className="order-2 sm:order-1 relative z-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {PILLARS_DATA.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
@@ -157,7 +157,7 @@ export default function FourPillarsSection() {
                   transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
                   transitionDelay: `${index * 160 + 250}ms`,
                 }}
-                className={`relative overflow-hidden flex flex-row sm:flex-col items-center sm:items-stretch justify-between p-3 sm:p-5 lg:p-7 min-h-[86px] sm:min-h-[290px] lg:min-h-[350px] lg:max-h-[385px] rounded-l-2xl rounded-r-[36px] sm:rounded-t-3xl sm:rounded-b-[85px] shadow-md sm:shadow-2xl transition-all sm:hover:-translate-y-2 sm:hover:shadow-[0_24px_48px_rgba(0,0,0,0.25)] group ${pillar.bgClass} ${pillar.isDarkText ? 'text-[#0e0e0e]' : 'text-white'} ${
+                className={`relative overflow-hidden flex flex-row sm:flex-col items-center sm:items-stretch justify-between p-3 sm:p-5 lg:p-7 min-h-[86px] sm:min-h-[260px] lg:min-h-[330px] lg:max-h-[385px] rounded-l-2xl rounded-r-[36px] sm:rounded-t-3xl sm:rounded-b-[85px] shadow-md sm:shadow-2xl transition-all sm:hover:-translate-y-2 sm:hover:shadow-[0_24px_48px_rgba(0,0,0,0.25)] group ${pillar.bgClass} ${pillar.isDarkText ? 'text-[#0e0e0e]' : 'text-white'} ${
                   isInView
                     ? 'opacity-100 blur-none translate-y-0'
                     : 'opacity-0 blur-[12px] translate-y-6 sm:translate-y-8'

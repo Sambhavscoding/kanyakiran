@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-andika: 'Andika', sans-serif;
+  --font-biryani: 'Biryani', sans-serif;
+  --font-andika: 'Biryani', sans-serif;
   --font-caveat: 'Caveat', cursive;
   --font-bodoni: 'Bodoni Moda', serif;
   --foreground-rgb: 15, 23, 42;
@@ -16,7 +17,7 @@ html,
 body {
   width: 100%;
   max-width: 100%;
-  font-family: var(--font-andika), sans-serif;
+  font-family: var(--font-biryani), sans-serif;
   overflow-x: clip;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

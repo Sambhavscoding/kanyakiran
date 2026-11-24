@@ -42,10 +42,10 @@ export function JoinModalProvider({ children }) {
         <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-fuchsia-600/25 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-violet-600/25 blur-3xl" />
 
-        <div className="relative max-h-[88vh] overflow-y-auto px-6 pb-8 pt-6 sm:px-9">
-          <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="relative max-h-[88vh] overflow-y-auto px-5 pb-7 pt-5 sm:px-9">
+          <div className="mb-5 sm:mb-6 flex items-start justify-between gap-3 sm:gap-4">
             <div>
-              <h2 id="join-title" className="text-3xl font-bold tracking-tight">
+              <h2 id="join-title" className="text-2xl sm:text-3xl font-bold tracking-tight">
                 Join the <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-[#fecb34] bg-clip-text text-transparent">Movement</span>
               </h2>
               <p className="mt-1 text-sm text-fuchsia-200/70">#AbAurNahi &nbsp; #GirlsWhoInspire</p>

@@ -77,7 +77,7 @@ export default function OurMissionSection() {
     <section
       ref={sectionRef}
       id="our-mission"
-      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:h-screen lg:max-h-screen text-[#0e0e0e] overflow-visible flex flex-col justify-center pt-5 pb-10 sm:py-6 lg:py-6 px-4 sm:px-6 lg:px-8"
+      className="relative w-full max-w-full h-auto min-h-[100dvh] lg:min-h-screen bg-transparent text-[#0e0e0e] overflow-visible flex flex-col justify-center py-10 sm:py-16 lg:py-12 px-4 sm:px-6 lg:px-8"
     >
       {/* Background Decorative Ambient Radial Glows */}
       {/* Soft Golden Glow - Left Side */}
@@ -166,7 +166,7 @@ export default function OurMissionSection() {
           }`}
         >
           {/* MOBILE VIEW */}
-          <div className="block lg:hidden w-full max-w-[440px] mx-auto px-1 space-y-3">
+          <div className="block lg:hidden w-full max-w-[440px] sm:max-w-[540px] md:max-w-[620px] mx-auto px-1 space-y-3">
             {/* Top 2-Column Grid: Pillar 1 & Pillar 2 */}
             <div className="grid grid-cols-2 gap-2.5">
               {/* Card 1: Mission 01 */}

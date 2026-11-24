@@ -59,16 +59,16 @@ export default function Navbar() {
       {/* Static Floating Navbar across all screens with shadow */}
       <header
         role="banner"
-        className="fixed top-0 left-0 right-0 z-50 pointer-events-none py-2.5 sm:py-3.5 md:py-4 px-3 sm:px-6 lg:px-8 select-none"
+        className="fixed top-0 left-0 right-0 z-50 pointer-events-none py-2 sm:py-3 md:py-4 px-2 sm:px-6 lg:px-8 select-none"
       >
-        <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-1.5 sm:gap-4">
           
           {/* ========================================================= */}
           {/* 1st ISLAND: 2 Logos (Kanya Kiran + KISS) Only             */}
           {/* ========================================================= */}
           <div
             onClick={(e) => handleScrollTo(e, '#hero')}
-            className="pointer-events-auto cursor-pointer bg-white/95 backdrop-blur-md rounded-full px-3 py-1.5 sm:px-4 sm:py-2 flex items-center gap-2 sm:gap-2.5 shadow-[0_8px_25px_rgba(0,0,0,0.12)] border border-black/5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.16)] transition-all duration-200 shrink-0 h-11 sm:h-12"
+            className="pointer-events-auto cursor-pointer bg-white/95 backdrop-blur-md rounded-full px-2.5 py-1 sm:px-4 sm:py-2 flex items-center gap-1.5 sm:gap-2.5 shadow-[0_8px_25px_rgba(0,0,0,0.12)] border border-black/5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.16)] transition-all duration-200 shrink-0 h-10 sm:h-12"
           >
             {/* Logo 1: Kanya Kiran Official Logo -> Scrolls to Hero */}
             <div
@@ -79,12 +79,12 @@ export default function Navbar() {
               <img
                 src="https://ik.imagekit.io/9plqngdvcd/cropped_circle_image.png"
                 alt="Kanya Kiran Logo"
-                className="h-7 sm:h-8 w-auto max-w-[85px] sm:max-w-[100px] object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-6 sm:h-8 w-auto max-w-[72px] sm:max-w-[100px] object-contain group-hover:scale-105 transition-transform duration-200"
               />
             </div>
 
             {/* Subtle Vertical Divider between logos */}
-            <span className="w-px h-4 sm:h-5 bg-gray-200 block shrink-0" />
+            <span className="w-px h-3.5 sm:h-5 bg-gray-200 block shrink-0" />
 
             {/* Logo 2: KISS Official Logo -> Redirects to https://kiss.ac.in/ */}
             <a
@@ -98,7 +98,7 @@ export default function Navbar() {
               <img
                 src="https://ik.imagekit.io/9plqngdvcd/kiss-2026-logo.png"
                 alt="KISS Logo"
-                className="h-6 sm:h-7 w-auto max-w-[70px] sm:max-w-[85px] object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-5 sm:h-7 w-auto max-w-[58px] sm:max-w-[85px] object-contain group-hover:scale-105 transition-transform duration-200"
               />
             </a>
           </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
           {/* ========================================================= */}
           {/* 2nd ISLAND: Nav Links (Desktop) & CTA + Hamburger (Mobile) */}
           {/* ========================================================= */}
-          <div className="pointer-events-auto bg-white/95 backdrop-blur-md rounded-full p-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 flex items-center gap-1 sm:gap-2 md:gap-3.5 lg:gap-4 shadow-[0_8px_25px_rgba(0,0,0,0.12)] border border-black/5 transition-all duration-200 h-11 sm:h-12 shrink-0">
+          <div className="pointer-events-auto bg-white/95 backdrop-blur-md rounded-full px-1.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 flex items-center gap-1 sm:gap-2 md:gap-3.5 lg:gap-4 shadow-[0_8px_25px_rgba(0,0,0,0.12)] border border-black/5 transition-all duration-200 h-10 sm:h-12 shrink-0">
             
             {/* Desktop Navigation Links (Hidden on phone) */}
             <nav className="hidden md:flex items-center gap-1 lg:gap-2">
@@ -126,10 +126,10 @@ export default function Navbar() {
             <button
               type="button"
               onClick={handleCtaClick}
-              className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#7e3bed] hover:bg-[#6c28e0] active:scale-95 text-white pl-3 pr-1.5 py-1 sm:pl-4 sm:pr-2 sm:py-1.5 rounded-full font-bold text-[11px] sm:text-xs md:text-[13px] tracking-tight shadow-md shadow-[#7e3bed]/25 transition-all duration-200 cursor-pointer group"
+              className="inline-flex items-center gap-1 sm:gap-2 bg-[#7e3bed] hover:bg-[#6c28e0] active:scale-95 text-white pl-2.5 pr-1 py-0.5 sm:pl-4 sm:pr-2 sm:py-1.5 rounded-full font-bold text-[10px] xs:text-[11px] sm:text-xs md:text-[13px] tracking-tight shadow-md shadow-[#7e3bed]/25 transition-all duration-200 cursor-pointer group"
             >
               <span className="whitespace-nowrap">#AbAurNahi</span>
-              <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 group-hover:bg-white text-white group-hover:text-[#7e3bed] flex items-center justify-center transition-colors">
+              <span className="w-4.5 h-4.5 sm:w-6 sm:h-6 rounded-full bg-white/20 group-hover:bg-white text-white group-hover:text-[#7e3bed] flex items-center justify-center transition-colors">
                 <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 group-hover:translate-x-0.5 transition-transform" />
               </span>
             </button>
@@ -139,7 +139,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-              className="md:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full text-[#111827] hover:bg-black/5 active:bg-black/10 transition-colors cursor-pointer"
+              className="md:hidden w-7 h-7 sm:w-9 sm:h-9 flex items-center justify-center rounded-full text-[#111827] hover:bg-black/5 active:bg-black/10 transition-colors cursor-pointer"
             >
               {mobileMenuOpen ? (
                 <X className="w-4 h-4 sm:w-5 sm:h-5 text-[#0e0e0e]" />

@@ -23,7 +23,7 @@ export default function HeroSection({ onOpenRegisterModal }) {
   };
 
   return (
-    <section id="hero" className="relative z-20 w-full max-w-full h-[100dvh] lg:h-screen bg-[#0e0e0e] text-white flex items-end sm:items-center overflow-hidden pt-16 pb-12 sm:pt-28 sm:pb-28 lg:pt-36 lg:pb-32 shadow-[0_24px_50px_rgba(0,0,0,0.85)]">
+    <section id="hero" className="relative z-20 w-full max-w-full min-h-[100dvh] h-auto lg:h-screen bg-[#0e0e0e] text-white flex items-center overflow-hidden pt-20 pb-12 sm:pt-28 sm:pb-24 lg:pt-0 lg:pb-0 shadow-[0_24px_50px_rgba(0,0,0,0.85)]">
       {/* Background Container */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         
@@ -57,9 +57,9 @@ export default function HeroSection({ onOpenRegisterModal }) {
           />
         </picture>
 
-        {/* Layer 3: Contrast Gradients - Brought down black filter opacity */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/60 via-[#0e0e0e]/35 to-transparent pointer-events-none z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e]/80 via-transparent to-[#0e0e0e]/30 pointer-events-none z-10" />
+        {/* Layer 3: Contrast Gradients - Deepened overlay for crisp text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0e0e0e]/90 via-[#0e0e0e]/65 to-[#0e0e0e]/20 pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e]/95 via-transparent to-[#0e0e0e]/40 pointer-events-none z-10" />
       </div>
 
       {/* Decorative Brand Petal Glows & Star Motifs */}
@@ -118,8 +118,8 @@ export default function HeroSection({ onOpenRegisterModal }) {
         </div>
 
         {/* Hero Headline & Tagline */}
-        <div className="max-w-3xl space-y-3 sm:space-y-6">
-          <h1 className="text-[2.35rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight sm:leading-[1.15] drop-shadow-md">
+        <div className="max-w-4xl lg:max-w-5xl space-y-3 sm:space-y-6">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[3.85rem] xl:text-[4.5rem] font-bold tracking-tight leading-[1.12] drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
             <span className="block text-white">For every woman,</span>
             <span className="block bg-gradient-to-r from-white via-[#ebddff] to-[#fecb34] bg-clip-text text-transparent">
               but not just for women.

@@ -113,7 +113,8 @@ const DotCanvas = React.memo(
 
     const drawDots = useCallback(
       (ctx, time) => {
-        const { width, height } = ctx.canvas;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         ctx.clearRect(0, 0, width, height);
 
         const performanceSettings = {
